@@ -1,0 +1,9 @@
+/vendor/
+/web/sites/default/files/
+/.ddev/.db_snapshots/
+/.ddev/.global_commands/
+/node_modules/
+/.tmp/
+.env
+
+
