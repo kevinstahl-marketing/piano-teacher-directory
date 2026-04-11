@@ -96,3 +96,9 @@ mix.copyDirectoryWatched('src/assets/icons', 'build/assets/icons');
 mix.copyDirectoryWatched('src/assets/videos', 'build/assets/videos');
 mix.copyDirectoryWatched('src/assets/fonts/**/*', 'build/fonts');
 
+mix.override((config) => {
+  config.plugins = config.plugins.filter(
+    (plugin) => plugin.constructor.name !== 'WebpackBarPlugin'
+  );
+});
+
