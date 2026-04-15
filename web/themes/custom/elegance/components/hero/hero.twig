@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Template for hero component.
+ */
+#}
+
+
+  <section class="position-relative overflow-hidden bg-dark text-white">
+    {# Background Image #}
+    <pre>{{ dump(hero) }}</pre>
+    <div class="position-absolute top-0 start-0 w-100 h-100">
+      {% if hero.image %}
+        <img
+          src="{{ hero.image }}"
+          alt="{{ hero.title }}"
+          class="w-100 h-100 object-fit-cover"
+        >
+      {% endif %}
+    </div>
+
+    {# Overlay #}
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+
+    {# Content #}
+    <div class="container position-relative py-5">
+      <div class="row">
+        <div class="col-lg-8">
+          {% if hero.title %}
+            <h1 class="display-3 mb-4">{{ hero.title }}</h1>
+          {% endif %}
+
+          {% if hero.subheading %}
+            <p class="lead mb-4">{{ hero.subheading }}</p>
+          {% endif %}
+
+          <div class="d-flex gap-3 flex-wrap">
+            {% if hero.button_1 %}
+              <a href="{{ hero.button_1.url }}" class="btn btn-primary">
+                {{ hero.button_1.text }}
+              </a>
+            {% endif %}
+
+            {% if hero.button_2 %}
+              <a href="{{ hero.button_2.url }}" class="btn btn-light">
+                {{ hero.button_2.text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

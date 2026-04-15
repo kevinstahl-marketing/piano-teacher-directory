@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Custom template for Core Page nodes.
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+  {# HERO #}
+
+  {% if page %}
+    <section class="hero position-relative">
+      {% if content.field_hero_image %}
+        <div class="hero-image">
+          {{ content.field_hero_image }}
+        </div>
+      {% endif %}
+      <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center">
+        {% if label %}
+          <h1{{ title_attributes.addClass(['display-4', 'fw-bold']) }}>
+            {{ label }}
+          </h1>
+        {% endif %}
+        {% if content.field_hero_button_1_text and content.field_hero_button_1_link %}
+          <div class="mt-4">
+            <a
+              href="{{ content.field_hero_button_1_link.0['#url'] }}"
+              class="btn btn-primary me-2"
+            >
+              {{ content.field_hero_button_1_text.0['#context'].value ?? content.field_hero_button_1_text.0['#markup'] ?? '' }}
+            </a>
+
+            {% if content.field_hero_button_2_text and content.field_hero_button_2_link %}
+              <a
+                href="{{ content.field_hero_button_2_link.0['#url'] }}"
+                class="btn btn-outline-light"
+              >
+                {{ content.field_hero_button_2_text.0['#context'].value ?? content.field_hero_button_2_text.0['#markup'] ?? '' }}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+  {% if hero %}
+  Hero WORKS
+    {{ hero.title }}
+    {{ hero.subheading }}
+  {% endif %}
+  {# MAIN CONTENT #}
+  <div{{ content_attributes.addClass(['container', 'py-5']) }}>
+    {{ content|without(
+      'field_hero_image',
+      'field_hero_button_1_text',
+      'field_hero_button_1_link',
+      'field_hero_button_2_text',
+      'field_hero_button_2_link'
+    ) }}
+  </div>
+</article>

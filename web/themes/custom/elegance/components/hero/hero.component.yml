@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: hero
+status: experimental
+description: 'The hero component'
+props:
+  type: object
+  properties:
+    hero_title:
+      type: string
+      title: hero title
+    hero_subheading:
+      type: string
+      title: Hero Subheading

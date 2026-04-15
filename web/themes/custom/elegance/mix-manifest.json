@@ -1,10 +1,11 @@
 {
     "/build/js/main.script.js": "/build/js/main.script.js",
     "/build/js/main.script.js.map": "/build/js/main.script.js.map",
-    "/components/page-content/page-content.css": "/components/page-content/page-content.css",
-    "/components/page-content/page-content.css.map": "/components/page-content/page-content.css.map",
+    "/components/hero/hero.js": "/components/hero/hero.js",
     "/components/navbar/navbar.css": "/components/navbar/navbar.css",
     "/components/navbar/navbar.css.map": "/components/navbar/navbar.css.map",
+    "/components/hero/hero.css": "/components/hero/hero.css",
+    "/components/hero/hero.css.map": "/components/hero/hero.css.map",
     "/components/heading/heading.css": "/components/heading/heading.css",
     "/components/heading/heading.css.map": "/components/heading/heading.css.map",
     "/components/block/block.css": "/components/block/block.css",
@@ -14,5 +15,7 @@
     "/components/page/page.css": "/components/page/page.css",
     "/components/page/page.css.map": "/components/page/page.css.map",
     "/components/page-navigation/page-navigation.css": "/components/page-navigation/page-navigation.css",
-    "/components/page-navigation/page-navigation.css.map": "/components/page-navigation/page-navigation.css.map"
+    "/components/page-navigation/page-navigation.css.map": "/components/page-navigation/page-navigation.css.map",
+    "/components/page-content/page-content.css": "/components/page-content/page-content.css",
+    "/components/page-content/page-content.css.map": "/components/page-content/page-content.css.map"
 }
