@@ -13,19 +13,25 @@ foreach (glob($includes_path) as $file) {
   require_once __DIR__ . '/includes/' . basename($file);
 }
 
+
+/**
+* This preprocessing is a webhook, any time a Core-page node is called, the $hero variable will be 
+* made available using the fields of that node.
+*/
+
 function elegance_preprocess_node(array &$variables): void {
   $node = $variables['node'] ?? NULL;
 
   if (!$node || $node->bundle() !== 'core_page') {
     return;
   }
-
+  
   $hero = [
     'title' => $node->get('field_hero_title')->value ?? '',
     'subheading' => $node->get('field_hero_subheading')->value ?? '',
     'button_1' => NULL,
     'button_2' => NULL,
-    'image' => NULL,
+    'image' => $node->get('field_hero_image'),
   ];
 
   if (!$node->get('field_hero_button_1_link')->isEmpty()) {
