@@ -1,0 +1,47 @@
+{#
+/**
+* @file
+* Custom template for Core Page nodes.
+*
+* Preproess is run in in theme functions, variables created from core page node
+*/
+#}
+
+{# HHERO #}
+
+{% include 'elegance:hero' with {
+page: true,
+hero_image: hero.image,
+hero_image_url: hero.image_url,
+hero_title: hero.title,
+hero_subheading: hero.subheading,
+title_attributes: title_attributes,
+hero_above: hero.above,
+hero_below: hero.below,
+} %}
+
+{# MARQUEE #}
+{% if marquee %}
+    {{ include('elegance:marquee', { marquee: marquee }) }}
+{% endif %}
+
+{% if featured_teachers %}
+    {# FEATURED TEACHERS (VIEW) #}
+    <div class="featured-teachers">
+    </div>
+{% endif %}
+
+{# HOW IT WORKS #}
+{% if how_it_works %}
+    {{ include('elegance:how-it-works', { how_it_works: how_it_works }) }}
+{% endif %}
+
+{# TEACHER CTA #}
+{% if teacher_cta %}
+    {{ include('elegance:teacher-cta', { teacher_cta: teacher_cta }) }}
+{% endif %}
+
+{# STUDENT CTA #}
+{% if student_cta %}
+    {{ include('elegance:student-cta', { student_cta: student_cta }) }}
+{% endif %}

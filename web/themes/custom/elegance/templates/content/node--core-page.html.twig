@@ -7,13 +7,21 @@
 */
 #}
 
+{# HHERO #}
+
 {% include 'elegance:hero' with {
-    page: true,
-    hero_image: hero.image,
-    hero_image_url: hero.image_url,
-    hero_title: hero.title,
-    hero_subheading: hero.subheading,
-    title_attributes: title_attributes,
-    hero_above: hero.above,
-    hero_below: hero.below,
-    } %}
+page: true,
+hero_image: hero.image,
+hero_image_url: hero.image_url,
+hero_title: hero.title,
+hero_subheading: hero.subheading,
+title_attributes: title_attributes,
+hero_above: hero.above,
+hero_below: hero.below,
+} %}
+
+
+{# Main Content #}
+<div class="container">
+    {{ content.body }}
+</div>
