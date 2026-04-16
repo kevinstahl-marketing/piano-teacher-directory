@@ -3,51 +3,42 @@
 /**
  * @file
  * Theme functions.
- *
- * Implements hook_preprocess_page().
  */
 
 // Include all files from the includes directory.
 $includes_path = __DIR__ . '/includes/*.theme';
 foreach (glob($includes_path) as $file) {
-  require_once __DIR__ . '/includes/' . basename($file);
+  require_once $file;
 }
 
-
 /**
-* This preprocessing is a webhook, any time a Core-page node is called, the $hero variable will be 
-* made available using the fields of that node.
-*/
-
+ * Prepares hero data for Core Page node templates.
+ */
 function elegance_preprocess_node(array &$variables): void {
   $node = $variables['node'] ?? NULL;
 
   if (!$node || $node->bundle() !== 'core_page') {
     return;
   }
-  
+
   $hero = [
     'title' => $node->get('field_hero_title')->value ?? '',
     'subheading' => $node->get('field_hero_subheading')->value ?? '',
-    'button_1' => NULL,
-    'button_2' => NULL,
-    'image' => $node->get('field_hero_image'),
+    'image' => $variables['content']['field_hero_image'] ?? NULL,
+    'image_url' => '',
+    'above' => $variables['content']['field_hero_content_above'] ?? NULL,
+    'below' => $variables['content']['field_hero_content_below'] ?? NULL,
   ];
 
-  if (!$node->get('field_hero_button_1_link')->isEmpty()) {
-    $link = $node->get('field_hero_button_1_link')->first();
-    $hero['button_1'] = [
-      'text' => $node->get('field_hero_button_1_text')->value ?? 'Learn more',
-      'url' => $link->getUrl()->toString(),
-    ];
-  }
+  $media = $node->get('field_hero_image')->entity ?? NULL;
 
-  if (!$node->get('field_hero_button_2_link')->isEmpty()) {
-    $link = $node->get('field_hero_button_2_link')->first();
-    $hero['button_2'] = [
-      'text' => $node->get('field_hero_button_2_text')->value ?? 'Read more',
-      'url' => $link->getUrl()->toString(),
-    ];
+  if ($media && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+    $file = $media->get('field_media_image')->entity ?? NULL;
+
+    if ($file) {
+      $hero['image_url'] = \Drupal::service('file_url_generator')
+        ->generateAbsoluteString($file->getFileUri());
+    }
   }
 
   $variables['hero'] = $hero;
