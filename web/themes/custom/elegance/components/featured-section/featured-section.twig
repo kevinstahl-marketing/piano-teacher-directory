@@ -1,0 +1,62 @@
+{#
+/**
+* @file
+* Template for featured-section component.
+*/
+#}
+
+{% if title or item_1_title or item_1_body or item_2_title or item_2_body or item_3_title or item_3_body %}
+    <section class="py-5 bg-white border-top border-bottom border-4 border-warning">
+        <div class="container">
+            {% if title %}
+                <h2 class="mb-5">{{ title }}</h2>
+            {% endif %}
+
+            {% if subheading %}
+                <p class="text-muted">{{ subheading }}</p>
+            {% endif %}
+            <div class="row g-4">
+
+                {# Item 1 #}
+                {% if item_1_body %}
+                    <div class="col-md-4">
+                        <div class="border-start border-4 border-primary ps-3">
+                            {{ item_1_body|raw }}
+                            {{ dump(item_1_body) }}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {# Item 2 #}
+                {% if item_2_title or item_2_body %}
+                    <div class="col-md-4">
+                        <div class="border-start border-4 border-warning ps-3">
+                            {% if item_2_title %}
+                                <h3 class="h5 mb-3">{{ item_2_title }}</h3>
+                            {% endif %}
+
+                            {% if item_2_body %}
+                                <p class="text-muted small mb-0">{{ item_2_body }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+
+                {# Item 3 #}
+                {% if item_3_title or item_3_body %}
+                    <div class="col-md-4">
+                        <div class="border-start border-4 border-primary ps-3">
+                            {% if item_3_title %}
+                                <h3 class="h5 mb-3">{{ item_3_title }}</h3>
+                            {% endif %}
+
+                            {% if item_3_body %}
+                                <p class="text-muted small mb-0">{{ item_3_body }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endif %}

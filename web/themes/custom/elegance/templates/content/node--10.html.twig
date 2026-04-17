@@ -23,14 +23,20 @@
 {% endif %}
 
 {# MARQUEE #}
-{% if section_1 %}
+{% if section_1.title %}
     {{ include('elegance:about-mission', {title: section_1.title, body: section_1.body}) }}
 {% endif %}
 
 
 {# HOW IT WORKS #}
-{% if how_it_works %}
-    {{ include('elegance:how-it-works', { how_it_works: how_it_works }) }}
+{% if featured_section.title %}
+    {{ include('elegance:featured-section',{
+    title: featured_section.title,
+    subheading: featured_section.subheading,
+    item_1_body: featured_section.section_1,
+    item_2_body: featured_section.section_2,
+    item_3_body: featured_section.section_3,
+    }) }}
 {% endif %}
 
 {# TEACHER CTA #}
