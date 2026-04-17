@@ -1,35 +1,32 @@
 {#
 /**
 * @file
-* Custom template for Core Page nodes.
+* The File Page for "About" - Node 10
 *
-* Preproess is run in in theme functions, variables created from core page node
+* Preprocess is run in in theme functions, variables created from core page node
 */
 #}
 
 {# HHERO #}
 
-{% include 'elegance:hero' with {
-page: true,
-hero_image: hero.image,
-hero_image_url: hero.image_url,
-hero_title: hero.title,
-hero_subheading: hero.subheading,
-title_attributes: title_attributes,
-hero_above: hero.above,
-hero_below: hero.below,
-} %}
+{% if hero %}
+    {% include 'elegance:hero' with {
+    page: true,
+    hero_image: hero.image,
+    hero_image_url: hero.image_url,
+    hero_title: hero.title,
+    hero_subheading: hero.subheading,
+    title_attributes: title_attributes,
+    hero_above: hero.above,
+    hero_below: hero.below,
+    } %}
+{% endif %}
 
 {# MARQUEE #}
-{% if marquee %}
-    {{ include('elegance:marquee', { marquee: marquee }) }}
+{% if section_1 %}
+    {{ include('elegance:about-mission', {title: section_1.title, body: section_1.body}) }}
 {% endif %}
 
-{% if featured_teachers %}
-    {# FEATURED TEACHERS (VIEW) #}
-    <div class="featured-teachers">
-    </div>
-{% endif %}
 
 {# HOW IT WORKS #}
 {% if how_it_works %}

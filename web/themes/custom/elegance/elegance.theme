@@ -40,6 +40,35 @@ function elegance_preprocess_node(array &$variables): void {
         ->generateAbsoluteString($file->getFileUri());
     }
   }
-
   $variables['hero'] = $hero;
+
+
+  $variables['marquee'] = $node->get('field_marquee_text')->value ?? '';
+
+  $variables['section_1'] = [
+    'title' => $node->get('field_section_1_title')->value ?? '',
+    'body' => $variables['content']['field_section_1_body'] ?? NULL,
+  ];
+
+   $variables['section_2'] = [
+    'title' => $node->get('field_section_2_title')->value ?? '',
+    'body' => $variables['content']['field_section_2_body'] ?? NULL,
+  ];
+
+  $variables['section_3'] = [
+    'title' => $node->get('field_section_3_title')->value ?? '',
+    'body' => $variables['content']['field_section_3_body'] ?? NULL,
+  ];
+
+  $variables['cta_1'] = [
+    'title' => $node->get('field_cta_1_title')->value ?? '',
+    'body' => $variables['content']['field_cta_1_body'] ?? NULL,
+    'link' => $variables['content']['field_cta_1_link'] ?? NULL,
+  ];
+
+  $variables['cta_2'] = [
+    'title' => $node->get('field_cta_2_title')->value ?? '',
+    'body' => $variables['content']['field_cta_2_body'] ?? NULL,
+    'link' => $variables['content']['field_cta_2_link'] ?? NULL,
+  ];
 }
