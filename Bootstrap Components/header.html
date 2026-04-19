@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Component Preview</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Optional: Custom styles -->
+    <style>
+        body {
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+
+        .component-wrapper {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="mb-4">Component Preview</h1>
+
+        <div class="component-wrapper">
+
+            <!-- 🔽 BUILD COMPONENT HERE 🔽 -->
+
+            <header class="bg-white border-bottom border-2 border-primary sticky-top">
+                <div class="container" style="max-width: 1200px;">
+                    <nav class="navbar navbar-expand-md navbar-light px-0">
+                        <!-- Logo/Brand -->
+                        <a class="navbar-brand d-flex align-items-center gap-3" href="/">
+                            <div class="d-flex align-items-center justify-content-center bg-primary"
+                                style="width: 40px; height: 40px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M9 18V5l12-2v13"></path>
+                                    <circle cx="6" cy="18" r="3"></circle>
+                                    <circle cx="18" cy="16" r="3"></circle>
+                                </svg>
+                            </div>
+                            <span class="fw-bold text-uppercase" style="letter-spacing: 0.05em;">Piano Teachers</span>
+                        </a>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Navigation Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto gap-md-4">
+                                <li class="nav-item">
+                                    <a class="nav-link text-muted" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-muted" href="/directory">Find Teachers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-muted" href="/teach">Teach</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-muted" href="/about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-muted" href="/contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- 🔼 END COMPONENT 🔼 -->
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional but good to have) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
