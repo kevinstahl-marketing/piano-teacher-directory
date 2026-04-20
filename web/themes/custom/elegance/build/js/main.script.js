@@ -8265,6 +8265,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/hero/hero.scss":
+/*!***********************************!*\
+  !*** ./components/hero/hero.scss ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/navbar/navbar.scss":
+/*!***************************************!*\
+  !*** ./components/navbar/navbar.scss ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/page-content/page-content.scss":
 /*!***************************************************!*\
   !*** ./components/page-content/page-content.scss ***!
@@ -8317,6 +8343,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/about-mission/about-mission.scss":
+/*!*****************************************************!*\
+  !*** ./components/about-mission/about-mission.scss ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/block/block.scss":
 /*!*************************************!*\
   !*** ./components/block/block.scss ***!
@@ -8330,36 +8369,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/featured-section/featured-section.scss":
+/*!***********************************************************!*\
+  !*** ./components/featured-section/featured-section.scss ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/heading/heading.scss":
 /*!*****************************************!*\
   !*** ./components/heading/heading.scss ***!
   \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./components/hero/hero.scss":
-/*!***********************************!*\
-  !*** ./components/hero/hero.scss ***!
-  \***********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./components/navbar/navbar.scss":
-/*!***************************************!*\
-  !*** ./components/navbar/navbar.scss ***!
-  \***************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8488,14 +8514,16 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/build/js/main.script": 0,
-/******/ 			"components/navbar/navbar": 0,
-/******/ 			"components/hero/hero": 0,
 /******/ 			"components/heading/heading": 0,
+/******/ 			"components/featured-section/featured-section": 0,
 /******/ 			"components/block/block": 0,
+/******/ 			"components/about-mission/about-mission": 0,
 /******/ 			"build/css/main.style": 0,
 /******/ 			"components/page/page": 0,
 /******/ 			"components/page-navigation/page-navigation": 0,
-/******/ 			"components/page-content/page-content": 0
+/******/ 			"components/page-content/page-content": 0,
+/******/ 			"components/navbar/navbar": 0,
+/******/ 			"components/hero/hero": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -8547,15 +8575,17 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./src/js/main.script.js"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/block/block.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/heading/heading.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/hero/hero.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/navbar/navbar.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/page-content/page-content.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/page-navigation/page-navigation.scss"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/navbar/navbar","components/hero/hero","components/heading/heading","components/block/block","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content"], function() { return __webpack_require__("./components/page/page.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./src/js/main.script.js"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/about-mission/about-mission.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/block/block.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/featured-section/featured-section.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/heading/heading.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/hero/hero.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/navbar/navbar.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/page-content/page-content.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/page-navigation/page-navigation.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/heading/heading","components/featured-section/featured-section","components/block/block","components/about-mission/about-mission","build/css/main.style","components/page/page","components/page-navigation/page-navigation","components/page-content/page-content","components/navbar/navbar","components/hero/hero"], function() { return __webpack_require__("./components/page/page.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
