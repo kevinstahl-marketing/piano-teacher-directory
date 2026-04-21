@@ -3,10 +3,11 @@
     "/build/js/main.script.js.map": "/build/js/main.script.js.map",
     "/components/about-mission/about-mission.js": "/components/about-mission/about-mission.js",
     "/components/featured-section/featured-section.js": "/components/featured-section/featured-section.js",
+    "/components/footer-links-block/footer-links-block.js": "/components/footer-links-block/footer-links-block.js",
     "/components/footer-nav/footer-nav.js": "/components/footer-nav/footer-nav.js",
     "/components/hero/hero.js": "/components/hero/hero.js",
-    "/components/footer-nav/footer-nav.css": "/components/footer-nav/footer-nav.css",
-    "/components/footer-nav/footer-nav.css.map": "/components/footer-nav/footer-nav.css.map",
+    "/components/footer-links-block/footer-links-block.css": "/components/footer-links-block/footer-links-block.css",
+    "/components/footer-links-block/footer-links-block.css.map": "/components/footer-links-block/footer-links-block.css.map",
     "/components/featured-section/featured-section.css": "/components/featured-section/featured-section.css",
     "/components/featured-section/featured-section.css.map": "/components/featured-section/featured-section.css.map",
     "/components/block/block.css": "/components/block/block.css",
@@ -30,5 +31,7 @@
     "/components/hero/hero.css": "/components/hero/hero.css",
     "/components/hero/hero.css.map": "/components/hero/hero.css.map",
     "/components/heading/heading.css": "/components/heading/heading.css",
-    "/components/heading/heading.css.map": "/components/heading/heading.css.map"
+    "/components/heading/heading.css.map": "/components/heading/heading.css.map",
+    "/components/footer-nav/footer-nav.css": "/components/footer-nav/footer-nav.css",
+    "/components/footer-nav/footer-nav.css.map": "/components/footer-nav/footer-nav.css.map"
 }
