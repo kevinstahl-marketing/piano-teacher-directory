@@ -21,7 +21,7 @@ set footer_classes = [
         <div class="row g-4">
 
             {# Brand Column #}
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-3 col-lg-3">
                 <div class="d-flex align-items-center gap-2 mb-3">
                     <div
                     class="d-flex align-items-center justify-content-center bg-primary text-white rounded"
@@ -47,14 +47,9 @@ set footer_classes = [
         </div>
 
         {# Quick Links / actual Drupal footer menu #}
-        <div class="col-md-4 col-lg-3">
-            <h4 class="h6 mb-3 fw-semibold">Quick Links</h4>
-            {% if page.footer %}
-                <div class="footer-menu">
-                    {{ page.footer }}
-                </div>
-            {% endif %}
-        </div>
+        {% if page.footer %}
+            {{ page.footer }}
+        {% endif %}
 
         <div class="mt-5 pt-4 border-top border-2 text-center">
             <p class="text-muted small mb-2">
