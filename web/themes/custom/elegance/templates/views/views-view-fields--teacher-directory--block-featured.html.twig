@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Theme override for a single teacher card in the featured homepage view.
+ *
+ * Available variables:
+ * - fields: A dictionary of field objects keyed by field machine name.
+ */
+#}
+
+<div class="card border-2 h-100 shadow-sm">
+
+  <div class="position-relative overflow-hidden border-bottom border-2" style="height: 300px;">
+    <a href="{{ fields.title.content|striptags|trim }}">
+      {{ fields.field_profile_photo.content }}
+    </a>
+  </div>
+
+  <div class="card-body d-flex flex-column">
+    <h3 class="h5 mb-2">
+      {{ fields.title.content }}
+    </h3>
+
+    {% if fields.field_country.content %}
+      <p class="text-muted small mb-3">
+        {{ fields.field_country.content }}
+      </p>
+    {% endif %}
+
+    {% if fields.field_styles.content %}
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <span class="badge bg-light text-primary border border-primary">
+          {{ fields.field_styles.content }}
+        </span>
+      </div>
+    {% endif %}
+
+    {% if fields.field_instruments.content %}
+      <p class="text-muted small mb-4 flex-grow-1">
+        {{ fields.field_instruments.content }}
+      </p>
+    {% endif %}
+
+    <div class="mt-auto">
+      {{ fields.view_node.content }}
+    </div>
+  </div>
+</div>
