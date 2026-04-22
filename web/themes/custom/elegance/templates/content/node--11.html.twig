@@ -1,0 +1,233 @@
+<!-- Hero Section -->
+<section class="position-relative overflow-hidden bg-dark text-white">
+  <!-- Background Image -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" 
+       style="background-image: url('https://images.unsplash.com/photo-1716322300547-a94b5118288d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'); background-size: cover; background-position: center 40%;">
+  </div>
+  
+  <!-- Dark Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+  
+  <!-- Content -->
+  <div class="container position-relative py-5" style="max-width: 1200px;">
+    <div class="row">
+      <div class="col-lg-8 py-5">
+        <h1 class="display-3 mb-4">Find Your Perfect<br>Piano Teacher</h1>
+        <p class="lead mb-5">Connect with exceptional piano instructors who match your learning style. Whether you're just starting out or advancing your skills, discover the right teacher for your musical journey.</p>
+        
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="/directory" class="btn btn-primary btn-lg">Find a Teacher →</a>
+          <a href="/about" class="btn btn-light btn-lg">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ drupal_view('teacher_directory', 'block_featured') }}
+
+<!-- Marquee Banner -->
+<div class="bg-light text-dark py-3 border-top border-bottom border-2 border-primary overflow-hidden">
+  <div class="marquee">
+    <span class="px-4">★ Welcome to Piano Teachers Directory ★</span>
+    <span class="px-4">Find qualified instructors in your area</span>
+    <span class="px-4">Over 500 students connected</span>
+    <span class="px-4">Classical • Jazz • Pop • Blues</span>
+    <span class="px-4">★ Welcome to Piano Teachers Directory ★</span>
+    <span class="px-4">Find qualified instructors in your area</span>
+    <span class="px-4">Over 500 students connected</span>
+    <span class="px-4">Classical • Jazz • Pop • Blues</span>
+  </div>
+</div>
+
+<!-- Featured Teachers Section -->
+<section class="py-5 bg-light">
+  <div class="container" style="max-width: 1200px;">
+    <div class="mb-5">
+      <h2 class="mb-3">Featured Teachers</h2>
+      <p class="text-muted">Meet some of our highly recommended piano instructors</p>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Teacher Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-2 h-100">
+          <div class="ratio ratio-4x3 border-bottom border-2">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400" class="card-img-top object-fit-cover" alt="Sarah Chen">
+          </div>
+          <div class="card-body">
+            <h3 class="h5 mb-2">Sarah Chen</h3>
+            <p class="text-muted small mb-3">San Francisco, CA</p>
+            
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary">Classical</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary">Jazz</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary">Theory</span>
+            </div>
+            
+            <p class="text-muted small mb-4">15+ years teaching experience with a focus on classical technique and music theory.</p>
+            
+            <a href="/teacher/1" class="btn btn-primary w-100">View Profile →</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Teacher Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-2 h-100">
+          <div class="ratio ratio-4x3 border-bottom border-2">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" class="card-img-top object-fit-cover" alt="Michael Rodriguez">
+          </div>
+          <div class="card-body">
+            <h3 class="h5 mb-2">Michael Rodriguez</h3>
+            <p class="text-muted small mb-3">Austin, TX</p>
+            
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary">Jazz</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary">Blues</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary">Improvisation</span>
+            </div>
+            
+            <p class="text-muted small mb-4">Professional jazz pianist specializing in improvisation and contemporary styles.</p>
+            
+            <a href="/teacher/2" class="btn btn-primary w-100">View Profile →</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Teacher Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-2 h-100">
+          <div class="ratio ratio-4x3 border-bottom border-2">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400" class="card-img-top object-fit-cover" alt="Emily Watson">
+          </div>
+          <div class="card-body">
+            <h3 class="h5 mb-2">Emily Watson</h3>
+            <p class="text-muted small mb-3">Portland, OR</p>
+            
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary-subtle text-primary border border-primary">Beginners</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary">Pop</span>
+              <span class="badge bg-primary-subtle text-primary border border-primary">Kids</span>
+            </div>
+            
+            <p class="text-muted small mb-4">Patient and encouraging teacher with expertise in teaching children and beginners.</p>
+            
+            <a href="/teacher/3" class="btn btn-primary w-100">View Profile →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5 bg-white border-top border-bottom border-4 border-primary">
+  <div class="container" style="max-width: 1200px;">
+    <div class="mb-5">
+      <h2 class="mb-3">How It Works</h2>
+      <p class="text-muted">Get started with piano lessons in three simple steps</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="border-start border-4 border-primary ps-3">
+          <div class="mb-3">
+            <span class="display-4 fw-bold text-primary">1</span>
+          </div>
+          <h3 class="h5 mb-2">Browse Teachers</h3>
+          <p class="text-muted small">
+            Search our directory of qualified piano teachers based on location, style, and experience.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="border-start border-4 border-warning ps-3">
+          <div class="mb-3">
+            <span class="display-4 fw-bold text-warning">2</span>
+          </div>
+          <h3 class="h5 mb-2">Choose Your Teacher</h3>
+          <p class="text-muted small">
+            Review profiles, read about teaching styles, and select the teacher that's right for you.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="border-start border-4 border-primary ps-3">
+          <div class="mb-3">
+            <span class="display-4 fw-bold text-primary">3</span>
+          </div>
+          <h3 class="h5 mb-2">Start Learning</h3>
+          <p class="text-muted small">
+            Contact your chosen teacher to schedule your first lesson and begin your musical journey.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teacher CTA Section -->
+<section class="py-5 bg-white border-top border-bottom border-4 border-warning">
+  <div class="container" style="max-width: 1200px;">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="mb-4">Are You a Piano Teacher?</h2>
+        <p class="text-muted mb-4">
+          Join our directory and connect with students in your area. Share your passion for piano and build your teaching practice.
+        </p>
+        
+        <ul class="list-unstyled mb-4">
+          <li class="text-muted border-start border-4 border-primary ps-3 mb-2">
+            Reach more students actively seeking instruction
+          </li>
+          <li class="text-muted border-start border-4 border-warning ps-3 mb-2">
+            Showcase your credentials and teaching style
+          </li>
+          <li class="text-muted border-start border-4 border-primary ps-3">
+            No listing fees or hidden costs
+          </li>
+        </ul>
+        
+        <a href="/teach" class="btn btn-warning btn-lg fw-bold border border-2 border-warning">
+          JOIN OUR DIRECTORY →
+        </a>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="bg-primary text-white p-4 border border-4 border-warning">
+          <p class="h5 fw-bold mb-3">
+            "This platform has helped me connect with so many dedicated students. It's been invaluable for growing my teaching practice."
+          </p>
+          <p class="small mb-0">— Sarah Chen, Listed Teacher Since 2016</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="position-relative overflow-hidden border-top border-4 border-warning">
+  <!-- Background Image -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" 
+       style="background-image: url('https://images.unsplash.com/photo-1759710465485-7cb5fe4c57cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'); background-size: cover; background-position: center;">
+  </div>
+  
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary" style="opacity: 0.8;"></div>
+  
+  <!-- Content -->
+  <div class="container position-relative py-5 text-center" style="max-width: 1200px;">
+    <div class="row">
+      <div class="col-lg-8 mx-auto py-5">
+        <h2 class="text-white mb-4">Ready to Start Your Piano Journey?</h2>
+        <p class="text-white mb-4 lead">
+          Browse our complete directory of piano teachers and find the perfect match for your learning style and goals.
+        </p>
+        <a href="/directory" class="btn btn-light btn-lg border border-2">View All Teachers</a>
+      </div>
+    </div>
+  </div>
+</section>
