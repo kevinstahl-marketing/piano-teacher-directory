@@ -12587,4 +12587,17 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .position-relative img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /*# sourceMappingURL=main.style.css.map*/
