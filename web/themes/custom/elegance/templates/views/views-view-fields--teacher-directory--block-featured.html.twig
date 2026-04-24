@@ -9,12 +9,12 @@
 #}
 
 <div class="card border-2 h-100 shadow-sm">
-    <div class="position-relative overflow-hidden border-bottom border-2" style="height: 300px;">
-        
+    <div class="teacher-card__image border-bottom border-2">
         {{ fields.field_profile_photo.content }}
     </div>
     <div class="card-body d-flex flex-column">
         <h3 class="h5 mb-2">
+
             {{ fields.title.content }}
         </h3>
 
@@ -24,11 +24,17 @@
             </p>
         {% endif %}
 
-        {% if fields.field_styles.content %}
+        {% set styles = fields.field_styles.content|render|striptags|trim|split(',') %}
+
+        {% if styles %}
             <div class="d-flex flex-wrap gap-2 mb-3">
-                <span class="badge bg-light text-primary border border-primary">
-                    {{ fields.field_styles.content }}
-                </span>
+                {% for style in styles %}
+                    {% if style|trim %}
+                        <span class="badge bg-light text-primary border border-primary">
+                            {{ style|trim }}
+                        </span>
+                    {% endif %}
+                {% endfor %}
             </div>
         {% endif %}
 
