@@ -1,0 +1,22 @@
+{#
+/**
+* @file
+* Theme override for a single teacher card in the featured homepage view.
+*
+* Available variables:
+* - fields: A dictionary of field objects keyed by field machine name.
+*/
+#}
+
+{{ include('elegance:teacher-card', {
+  title: fields.title.content,
+  country: fields.field_country.content,
+  styles: fields.field_styles.content,
+  instruments: fields.field_instruments.content,
+  bio: fields.field_bio.content,
+  image: fields.field_profile_photo.content,
+  url: row._entity and row._entity.id()
+    ? path('entity.node.canonical', {'node': row._entity.id()})
+    : '#'
+}, with_context = false) }}
+
