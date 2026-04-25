@@ -56,7 +56,10 @@ set views_classes = [
 'view-display-id-' ~ display_id,
 dom_id ? 'js-view-dom-id-' ~ dom_id,
 css_name ? 'view-' ~ css_name,
-'container',
+'container-fluid',
+'container-lg',
+'mb-0',
+'py-5'
 ]|merge(view_view_utility_classes ?: [])
 %}
 
@@ -127,7 +130,7 @@ set views_feed_icons_classes = [
 %}
 
 <section class="py-5 bg-light">
-    <div {{ views_attributes.addClass(views_classes) }}>
+    <div {{ views_attributes.addClass(views_classes) }} style="max-width: 1200px;">
 
         <div class="mb-5">
             <h2 class="mb-3">Featured Teachers</h2>

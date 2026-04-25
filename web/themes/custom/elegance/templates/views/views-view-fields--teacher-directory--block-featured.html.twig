@@ -12,40 +12,48 @@
     <div class="teacher-card__image border-bottom border-2">
         {{ fields.field_profile_photo.content }}
     </div>
-    <div class="card-body d-flex flex-column">
-        <h3 class="h5 mb-2">
 
-            {{ fields.title.content }}
-        </h3>
+    <div class="card-body d-flex flex-column">
+        <div class="teacher-title">
+            <h3 class="h5 mb-1">
+                {{ fields.title.content }}
+
+            </h3>
+        </div>
 
         {% if fields.field_country.content %}
-            <p class="text-muted small mb-3">
+            <p class="text-muted small mb-2">
                 {{ fields.field_country.content }}
             </p>
         {% endif %}
 
-        {% set styles = fields.field_styles.content|render|striptags|trim|split(',') %}
-
+        {% set styles = fields.field_styles.content|raw %}
         {% if styles %}
-            <div class="d-flex flex-wrap gap-2 mb-3">
-                {% for style in styles %}
-                    {% if style|trim %}
-                        <span class="badge bg-light text-primary border border-primary">
-                            {{ style|trim }}
-                        </span>
-                    {% endif %}
-                {% endfor %}
+            <div class="teacher-styles">
+                {{ styles }}
             </div>
         {% endif %}
 
         {% if fields.field_instruments.content %}
-            <p class="text-muted small mb-4 flex-grow-1">
-                {{ fields.field_instruments.content }}
-            </p>
-        {% endif %}
+  <p class="small mt-2 mb-2">
+    <span class="text-body-secondary fw-medium me-1">Instruments:</span>
+    <span class="text-muted">{{ fields.field_instruments.content }}</span>
+  </p>
+{% endif %}
 
-        <div class="mt-auto">
-            {{ fields.view_node.content }}
+        <div class="flex-grow-1">
+            {% if fields.field_bio.content %}
+                <p class="teacher-card__bio text-muted small mb-0">
+                    {{ fields.field_bio.content }}
+                </p>
+            {% endif %}
         </div>
+
+        <a href="{{ path('entity.node.canonical', {'node': row._entity.id()}) }}"
+            class="btn btn-primary w-100 mt-auto">
+            View Profile →
+        </a>
+
+
     </div>
 </div>
