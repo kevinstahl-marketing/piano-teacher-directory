@@ -1,0 +1,112 @@
+<!-- Page Header -->
+<section class="position-relative overflow-hidden bg-dark text-white py-5 border-bottom border-4 border-warning">
+    <!-- Background Image -->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-image: url('https://images.unsplash.com/photo-1634229952383-8e4069f75e2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'); background-size: cover; background-position: center;">
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.75;"></div>
+
+    <!-- Content -->
+    <div class="container position-relative py-5 text-center" style="max-width: 1200px;">
+        <h1 class="mb-4">Contact Us</h1>
+        <p class="lead mx-auto" style="max-width: 48rem;">
+            Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="py-5 bg-light">
+    <div class="container" style="max-width: 600px;">
+
+        <!-- Success Message (show when form is submitted) -->
+        <div class="alert alert-success border-2 text-center mb-4 d-none" id="successMessage">
+            <p class="fw-bold fs-5 mb-2">MESSAGE SENT!</p>
+            <p class="mb-0">Thank you for your message! We'll get back to you soon.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white border-2 p-4 p-md-5">
+            <form id="contactForm">
+                <div class="mb-4">
+                    <label for="name" class="form-label fw-bold">Name</label>
+                    <input
+                    type="text"
+                    class="form-control form-control-lg border-2"
+                    id="name"
+                    name="name"
+                    required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="form-label fw-bold">Email</label>
+                    <input
+                    type="email"
+                    class="form-control form-control-lg border-2"
+                    id="email"
+                    name="email"
+                    required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="form-label fw-bold">Message</label>
+                    <textarea
+                    class="form-control form-control-lg border-2"
+                    id="message"
+                    name="message"
+                    rows="8"
+                    style="resize: none;"
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold border-2">
+                SEND MESSAGE →
+            </button>
+        </form>
+    </div>
+
+    <section class="py-5 bg-light">
+        <div class="container" style="max-width: 760px;">
+            <div class="bg-white border rounded-3 shadow-sm p-4 p-md-5">
+
+                {{ drupal_entity_form('contact_message', NULL, 'default', {'contact_form': 'contact_us'}) }}
+                {{ drupal_title() }}
+                {{ drupal_entity_form('contact_message', NULL, 'default', {'contact_form': 'contact_us'}) }}
+                {{ contact_us_form }}
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Other Contact Info -->
+    <div class="mt-5 p-4 p-md-5 bg-white border-2 text-center">
+        <h3 class="h5 mb-4">Other Ways to Reach Us</h3>
+        <p class="text-muted mb-2">
+            Email: info@pianoteachers.com
+        </p>
+        <p class="text-muted mb-0">
+            We typically respond within 24-48 hours.
+        </p>
+    </div>
+
+</div>
+</section>
+
+<!-- JavaScript for form handling -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Show success message
+        document.getElementById('successMessage').classList.remove('d-none');
+
+        // Reset form after 3 seconds
+        setTimeout(function() {
+            document.getElementById('contactForm').reset();
+            document.getElementById('successMessage').classList.add('d-none');
+        }, 3000);
+    });
+</script>
