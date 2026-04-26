@@ -14,4 +14,17 @@
  * @ingroup themeable
  */
 #}
-{% include "elegance:form-element--label" %}
+{%
+  set classes = [
+    title_display == 'after' ? 'form-check-label',
+    title_display == 'invisible' ? 'visually-hidden',
+    required ? 'js-form-required',
+    required ? 'form-required',
+    'fw-bold',
+  ]
+%}
+
+
+{% if title is not empty or required -%}
+  <label {{ attributes.addClass(classes) }}>{{ title }}</label>
+{%- endif %}
