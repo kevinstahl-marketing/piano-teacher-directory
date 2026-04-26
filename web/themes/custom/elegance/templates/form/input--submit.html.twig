@@ -11,10 +11,11 @@
  * @see template_preprocess_input()
  */
 #}
+
 {%
-  include 'radix:input' with {
+  include 'elegance:input' with {
     attributes: attributes.removeClass('button'),
     remove_form_control: true,
-    input_utility_classes: ['btn', 'btn-primary']
+    input_utility_classes: ['btn', 'btn-primary', 'btn-lg', 'w-100', 'fw-bold', 'border-2']
   }
 %}
