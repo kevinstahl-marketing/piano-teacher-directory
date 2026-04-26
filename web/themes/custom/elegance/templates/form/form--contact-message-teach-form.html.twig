@@ -1,0 +1,40 @@
+
+
+<form{{ attributes.addClass('teacher-application-form', 'p-0', 'border-0', 'm-0') }}>
+  {{ element.form_build_id }}
+  {{ element.form_token }}
+  {{ element.form_id }}
+                <!-- Personal Information Section -->
+
+  <div class="border-start border-4 border-primary ps-3 mb-5">
+    <h3 class="h6 fw-bold mb-4">PERSONAL INFORMATION</h3>
+
+    {{ element.name }}
+    {{ element.mail }}
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        {{ element.field_phone_number }}
+      </div>
+      <div class="col-md-6">
+        {{ element.field_location }}
+      </div>
+    </div>
+  </div>
+
+  <div class="border-start border-4 border-warning ps-3 mb-5">
+    <h3 class="h6 fw-bold mb-4">TEACHING INFORMATION</h3>
+
+    {{ element.subject }}
+    {{ element.message }}
+    {{ element.field_years_of_experience }}
+    {{ element.field_instruments_taught }}
+    {{ element.field_education_credentials }}
+    {{ element.field_hourly_rate }}
+    {{ element.field_online_lessons }}
+    {{ element.field_website_booking_link }}
+  </div>
+
+  {{ element.actions }}
+
+</form>

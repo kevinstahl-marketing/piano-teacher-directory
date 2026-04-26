@@ -37,10 +37,18 @@
     "/components/navbar/navbar.css.map": "/components/navbar/navbar.css.map",
     "/components/nav/nav.css": "/components/nav/nav.css",
     "/components/nav/nav.css.map": "/components/nav/nav.css.map",
+    "/components/input/input.css": "/components/input/input.css",
+    "/components/input/input.css.map": "/components/input/input.css.map",
     "/components/hero/hero.css": "/components/hero/hero.css",
     "/components/hero/hero.css.map": "/components/hero/hero.css.map",
     "/components/heading/heading.css": "/components/heading/heading.css",
     "/components/heading/heading.css.map": "/components/heading/heading.css.map",
+    "/components/form/form.css": "/components/form/form.css",
+    "/components/form/form.css.map": "/components/form/form.css.map",
+    "/components/form-element/form-element.css": "/components/form-element/form-element.css",
+    "/components/form-element/form-element.css.map": "/components/form-element/form-element.css.map",
+    "/components/form-element--label/form-element--label.css": "/components/form-element--label/form-element--label.css",
+    "/components/form-element--label/form-element--label.css.map": "/components/form-element--label/form-element--label.css.map",
     "/components/footer-nav/footer-nav.css": "/components/footer-nav/footer-nav.css",
     "/components/footer-nav/footer-nav.css.map": "/components/footer-nav/footer-nav.css.map"
 }

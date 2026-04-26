@@ -12703,5 +12703,66 @@ textarea.form-control-lg {
             transform: translateX(-50%);
   }
 }
+.teacher-application-form {
+  background: #fff;
+  border: 2px solid var(--bs-border-color);
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .teacher-application-form {
+    padding: 3rem;
+  }
+}
+.teacher-application-form .form-group,
+.teacher-application-form .form-wrapper,
+.teacher-application-form .form-check {
+  margin-bottom: 1.5rem;
+}
+.teacher-application-form .form-label,
+.teacher-application-form .form-check-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.teacher-application-form .form-control,
+.teacher-application-form .form-select {
+  border-width: 2px;
+  font-size: 1.05rem;
+  padding: 0.75rem 1rem;
+}
+.teacher-application-form textarea.form-control {
+  min-height: 180px;
+  resize: none;
+}
+.teacher-application-form .description,
+.teacher-application-form .form-text {
+  font-size: 0.8rem;
+  color: var(--bs-secondary-color);
+  margin-top: 0.35rem;
+}
+.teacher-application-form .form-submit {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Fake “section” spacing using field order */
+.teacher-application-form #edit-subject-wrapper,
+.teacher-application-form #edit-message-wrapper {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 4px solid var(--bs-warning);
+}
+
+/* Phone + location side-by-side */
+@media (min-width: 768px) {
+  .teacher-application-form #edit-field-phone-number-wrapper,
+  .teacher-application-form #edit-field-location-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 0.75rem);
+  }
+  .teacher-application-form #edit-field-phone-number-wrapper {
+    margin-right: 1.5rem;
+  }
+}
 
 /*# sourceMappingURL=main.style.css.map*/
