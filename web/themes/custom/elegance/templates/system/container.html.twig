@@ -27,4 +27,15 @@
     has_parent ? 'form-wrapper',
   ]
 %}
-<div{{attributes.addClass(classes)}}>{{ children }}</div>
+
+{% if attributes.hasClass('field--widget-string-textfield')
+  or attributes.hasClass('field--widget-string-textarea')
+  or attributes.hasClass('field--widget-telephone-default')
+  or attributes.hasClass('field--widget-options-select')
+  or attributes.hasClass('field--widget-boolean-checkbox')
+  or attributes.hasClass('field--widget-link-default')
+%}
+  {% set classes = classes|merge(['p-0', 'w-100']) %}
+{% endif %}
+
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>

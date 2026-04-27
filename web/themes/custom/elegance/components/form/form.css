@@ -191,10 +191,4 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-.form-item label.form-required::after {
-  margin-inline: 0.15em;
-  content: "*";
-  color: var(--bs-form-invalid-color);
-}
-
-/*# sourceMappingURL=form-element.css.map*/
+/*# sourceMappingURL=form.css.map*/
