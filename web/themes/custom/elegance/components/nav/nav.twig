@@ -29,10 +29,12 @@
 
 {%
   set nav_classes = [
-    'nav',
     style,
     alignment,
-    fill
+    fill,
+    'navbar-nav',
+    'ms-auto',
+    'gap-md-4',
   ]|merge(nav_utility_classes ?: [])
 %}
 
@@ -50,6 +52,7 @@
         {%
           set nav_link_classes = [
             'nav-link',
+            'text-muted',
             item.in_active_trail ? 'active' : ''
           ]|merge(nav_link_utility_classes ?: [])
         %}

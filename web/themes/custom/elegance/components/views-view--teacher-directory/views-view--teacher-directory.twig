@@ -1,0 +1,137 @@
+{#
+/**
+ * @file
+ * Template for views-view--teacher-directory component.
+ */
+#}
+
+{% set views_attributes = attributes ?: create_attribute() %}
+{% set views_title_attributes = views_title_attributes ?: create_attribute() %}
+{% set views_header_attributes = views_header_attributes ?: create_attribute() %}
+{% set views_filters_attributes = views_filters_attributes ?: create_attribute() %}
+{% set views_rows_attributes = views_rows_attributes ?: create_attribute() %}
+{% set views_empty_attributes = views_empty_attributes ?: create_attribute() %}
+{% set views_footer_attributes = views_footer_attributes ?: create_attribute() %}
+{% set views_attachment_before_attributes = views_attachment_before_attributes ?: create_attribute() %}
+{% set views_attachment_after_attributes = views_attachment_after_attributes ?: create_attribute() %}
+{% set views_pager_attributes = views_pager_attributes ?: create_attribute() %}
+{% set views_more_attributes = views_more_attributes ?: create_attribute() %}
+{% set views_feed_icons_attributes = views_feed_icons_attributes ?: create_attribute() %}
+
+{%
+  set views_classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+    css_name ? 'view-' ~ css_name,
+  ]|merge(view_view_utility_classes ?: [])
+%}
+
+{%
+  set views_filters_classes = [
+    'view-filters',
+  ]|merge(views_filters_utility_classes ?: [])
+%}
+
+{%
+  set views_rows_classes = [
+    'view-content',
+    'row',
+    'g-4',
+  ]|merge(views_rows_utility_classes ?: [])
+%}
+
+{%
+  set views_pager_classes = [
+    'pager',
+    'mt-5',
+  ]|merge(views_pager_utility_classes ?: [])
+%}
+
+<div {{ views_attributes.addClass(views_classes) }}>
+
+  {% block views_filters %}
+    {% if exposed %}
+      <section class="py-4 bg-white border-bottom border-4 border-primary">
+        <div class="container" style="max-width: 1200px;">
+          <div {{ views_filters_attributes.addClass(views_filters_classes) }}>
+            {{ exposed }}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  {% endblock %}
+
+  <section class="py-5 bg-light">
+    <div class="container" style="max-width: 1200px;">
+
+      <div class="mb-4">
+        <p class="fw-bold text-muted mb-0">TEACHERS FOUND</p>
+      </div>
+
+      {% block views_attachment_before %}
+        {% if attachment_before %}
+          <div {{ views_attachment_before_attributes.addClass(['attachment', 'attachment-before']) }}>
+            {{ attachment_before }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block views_rows %}
+        {% if rows %}
+          <div {{ views_rows_attributes.addClass(views_rows_classes) }}>
+            {{ rows }}
+          </div>
+        {% elseif empty %}
+          <div {{ views_empty_attributes.addClass(['view-empty', 'text-center', 'py-5']) }}>
+            {{ empty }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block views_pager %}
+        {% if pager %}
+          <div {{ views_pager_attributes.addClass(views_pager_classes) }}>
+            {{ pager }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block views_attachment_after %}
+        {% if attachment_after %}
+          <div {{ views_attachment_after_attributes.addClass(['attachment', 'attachment-after']) }}>
+            {{ attachment_after }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block views_more %}
+        {% if more %}
+          <div class="mt-4">
+            {{ more }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block views_footer %}
+        {% if footer %}
+          <div {{ views_footer_attributes.addClass(['view-footer']) }}>
+            {{ footer }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+      {% block views_feed_icons %}
+        {% if feed_icons %}
+          <div {{ views_feed_icons_attributes.addClass(['feed-icons']) }}>
+            {{ feed_icons }}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+    </div>
+  </section>
+
+</div>

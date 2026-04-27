@@ -1,11 +1,8 @@
 {#
 /**
-* @file
-* Theme override for a single teacher card in the featured homepage view.
-*
-* Available variables:
-* - fields: A dictionary of field objects keyed by field machine name.
-*/
+ * @file
+ * Theme override for a single teacher card.
+ */
 #}
 
 <div class="card border-2 h-100 shadow-sm">
@@ -47,8 +44,8 @@
       {% endif %}
     </div>
 
-    <a href="{{ url }}" class="btn btn-primary w-100 mt-auto">
-      View Profile →
-    </a>
+    <div class="mt-auto">
+      {{ link }}
+    </div>
   </div>
 </div>

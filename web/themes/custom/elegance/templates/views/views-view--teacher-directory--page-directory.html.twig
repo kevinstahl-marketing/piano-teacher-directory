@@ -1,0 +1,39 @@
+{#
+/**
+* @file
+* Theme override for the Teacher Directory view page.
+*/
+#}
+
+<section class="position-relative overflow-hidden bg-dark text-white py-5 border-bottom border-4 border-warning">
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-image: url('https://images.unsplash.com/photo-1446922228752-9b9245ca8aa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'); background-size: cover; background-position: center;">
+    </div>
+
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.8;"></div>
+
+    <div class="container position-relative py-5" style="max-width: 1200px;">
+        <div class="text-center mb-5">
+            <h1 class="mb-4">Find a Piano Teacher</h1>
+            <p class="lead mb-5">Browse our directory of experienced piano instructors</p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-4 gap-md-5">
+                <div class="text-center border-start border-4 border-white ps-3">
+                    <div class="display-5 fw-bold mb-1">25+</div>
+                    <div class="small text-uppercase">Teachers</div>
+                </div>
+                <div class="text-center border-start border-4 border-white ps-3">
+                    <div class="display-5 fw-bold mb-1">15+</div>
+                    <div class="small text-uppercase">Styles</div>
+                </div>
+                <div class="text-center border-start border-4 border-white ps-3">
+                    <div class="display-5 fw-bold mb-1">50+</div>
+                    <div class="small text-uppercase">Cities</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Teachers Grid -->
+{% include "elegance:views-view--teacher-directory" %}
