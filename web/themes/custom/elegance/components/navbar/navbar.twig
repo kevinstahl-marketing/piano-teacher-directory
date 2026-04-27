@@ -27,7 +27,7 @@
 set navbar_container_classes = [
 navbar_container_type is null ? 'container' : '',
 navbar_container_type ? 'container' ~ (navbar_container_type ? '-' ~ navbar_container_type : '') : '',
-]|merge(navbar_container_utility_classes ?: ['d-flex', 'align-items-center', 'justify-content-between'])
+]|merge(navbar_container_utility_classes ?: ['d-flex', 'align-items-center', 'justify-content-between', 'px-5'])
 %}
 
 {%
