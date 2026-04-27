@@ -9,3 +9,13 @@ node_modules
 # local env files
 .env.local
 .env.test.local
+
+# Drupal theme build artifacts
+web/themes/custom/elegance/build/
+web/themes/custom/elegance/mix-manifest.json
+
+# Source maps
+*.map
+
+# Compiled component CSS (if you're building them)
+web/themes/custom/elegance/components/**/*.css
