@@ -1,84 +1,76 @@
-.teacher-card__image {
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 1/1;
+.teacher-card,
+.teacher-card .card {
+  height: 100%;
 }
 
-.teacher-card__image a {
-  display: block;
+.teacher-card__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.teacher-card__image .field,
+.teacher-card__image .field__item {
   width: 100%;
   height: 100%;
 }
 
 .teacher-card__image img {
   display: block;
-  width: 100%;
+  width: 100% !important;
   height: 100% !important;
   object-fit: cover;
   object-position: center top;
 }
 
-.teacher-styles ul {
+.teacher-card__location .field,
+.teacher-card__location .field__item {
+  display: inline;
+}
+
+.teacher-styles .field__items {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
-.teacher-styles ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.teacher-styles li {
-  /* remove default spacing issues */
-  margin: 0;
-}
-
-/* 🔥 Make the link the badge */
-.teacher-styles li a {
+.teacher-styles .field__item a {
   display: inline-block;
-  padding: 0.20em 0.50em;
-
+  padding: 0.25em 0.55em;
   border: 1px solid var(--bs-primary);
-  border-radius: 0.375rem;
-
+  border-radius: var(--bs-border-radius);
   background: var(--bs-light);
   color: var(--bs-primary);
-
   font-size: 0.75rem;
   font-weight: 600;
+  line-height: 1;
   text-decoration: none;
-  /* remove underline */
-  transition: all 0.2s ease;
 }
 
-/* hover state */
-.teacher-styles li a:hover {
+.teacher-styles .field__item a:hover {
   background: var(--bs-primary);
   color: var(--bs-white);
-  border-color: var(--bs-primary);
-  text-decoration: none;
 }
 
-.teacher-title a {
-  text-decoration: none;
-  color: var(--bs-body-color);
+.teacher-instruments .field,
+.teacher-instruments .field__items,
+.teacher-instruments .field__item {
+  display: inline;
+}
+
+.teacher-instruments .field__item:not(:last-child)::after {
+  content: ", ";
 }
 
 .teacher-card__bio {
   display: -webkit-box;
-  -webkit-line-clamp: 3;       // number of lines
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
-  // optional but nice:
   line-height: 1.4;
-  max-height: calc(1.4em * 3); // keeps layout consistent
+  max-height: calc(1.4em * 3);
+}
+
+.teacher-card__bio p {
+  margin-bottom: 0;
 }
