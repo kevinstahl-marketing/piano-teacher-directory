@@ -7,3 +7,4 @@
 .env
 
 
+backup-before-deploy.sql.gz
