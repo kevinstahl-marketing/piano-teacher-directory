@@ -1,0 +1,68 @@
+.teacher-profile-page__photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.teacher-profile-page__tags,
+.teacher-tags .field__items,
+.teacher-tags.field,
+.teacher-tags .field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 2);
+}
+
+.teacher-tags .field__item a {
+  display: inline-block;
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  border: var(--bs-border-width) solid;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+.teacher-tags--instruments .field__item a {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+  color: var(--bs-dark);
+}
+
+.teacher-tags--instruments .field__item a:hover,
+.teacher-tags--instruments .field__item a:focus {
+  background-color: var(--bs-dark);
+  border-color: var(--bs-dark);
+  color: var(--bs-warning);
+}
+
+.teacher-tags--styles .field__item a {
+  background-color: var(--bs-light);
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+.teacher-tags--styles .field__item a:hover,
+.teacher-tags--styles .field__item a:focus {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.teacher-profile-page__contact a {
+  display: inline-block;
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  border: var(--bs-border-width) solid var(--bs-primary);
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+.teacher-profile-page__contact a:hover,
+.teacher-profile-page__contact a:focus {
+  background-color: var(--bs-dark);
+  border-color: var(--bs-dark);
+  color: var(--bs-white);
+}

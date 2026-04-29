@@ -1,0 +1,137 @@
+{#
+/**
+* @file
+* Template for node--teacher-profile component.
+*/
+#}{#
+/**
+* @file
+* Full teacher profile page.
+*/
+#}
+
+<article{{ attributes.addClass('teacher-profile-page') }}>
+
+<section class="py-3 border-bottom bg-light">
+    <div class="container" style="max-width: 1200px;">
+        <a href="/teachers" class="text-decoration-none text-muted d-inline-flex align-items-center gap-2">
+            ← Back to Directory
+        </a>
+    </div>
+</section>
+
+<section class="py-5 bg-light border-top border-4 border-primary">
+    <div class="container" style="max-width: 1200px;">
+        <div class="row g-5">
+
+            <div class="col-md-4 teacher-profile-page__photo">
+                {{ content.field_profile_photo }}
+            </div>
+
+            <div class="col-md-8">
+                <h1 class="mb-4">{{ label }}</h1>
+
+                <p class="text-muted mb-4">
+
+                    {% if content.field_country %}
+                        {{ content.field_country }}
+                    {% endif %}
+                        {% if content.field_city_region %}
+                        {{ content.field_city_region }}
+                    {% endif %}
+                  
+                </p>
+
+                <div class="teacher-profile-page__tags">
+
+                    <div class="teacher-tags teacher-tags--instruments">
+                        {{ content.field_instruments }}
+                    </div>
+
+                    <div class="teacher-tags teacher-tags--styles">
+                        {{ content.field_styles }}
+                    </div>
+
+                </div>
+
+                {% if content.field_contact_email %}
+                    <div class="mt-3">
+                        <div class="small text-muted text-uppercase fw-bold mb-1">
+                            Email
+                        </div>
+                        <div class="link-primary fw-semibold">
+                            {{ content.field_contact_email }}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container" style="max-width: 1200px;">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <section class="mb-5">
+                    <h2 class="mb-4">About</h2>
+                    <div class="text-muted">
+                        {{ content.field_bio }}
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="mb-4">Teaching Approach</h2>
+                    <div class="text-muted">
+                        {{ content.field_teaching_approach }}
+                    </div>
+                </section>
+            </div>
+
+            <aside class="col-lg-4">
+                <div class="bg-white border border-2 p-4" style="top: 1.5rem;">
+                    <h3 class="h5 fw-bold mb-4">Details</h3>
+
+                    {% if content.field_years_of_experience %}
+                        <div class="border-bottom border-2 pb-3 mb-3">
+                            <div class="small text-muted text-uppercase fw-bold mb-1">Experience</div>
+                            <div>{{ content.field_years_of_experience }}</div>
+                        </div>
+                    {% endif %}
+
+                    {% if content.field_website_booking_link %}
+                        <div class="border-bottom border-2 pb-3 mb-3">
+                            <div class="small text-muted text-uppercase fw-bold mb-1">
+                                Book / Website
+                            </div>
+                            <div>
+                                {{ content.field_website_booking_link }}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if content.field_hourly_rate %}
+                        <div class="border-bottom border-2 pb-3 mb-3">
+                            <div class="small text-muted text-uppercase fw-bold mb-1">Hourly Rate</div>
+                            <div>{{ content.field_hourly_rate }}</div>
+                        </div>
+                    {% endif %}
+
+                    {% if content.field_city_region or content.field_country %}
+                        <div>
+                            <div class="small text-muted text-uppercase fw-bold mb-1">Location</div>
+                            <div>
+                                {{ content.field_city_region }}
+                                {{ content.field_country }}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+</article>
