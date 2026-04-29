@@ -14,3 +14,32 @@
  * $body-bg: #000;
  * $body-color: $gray-100;
  */
+
+ // Color Variables
+$primary: #5C443E;
+$primary-hover: #4A3631;
+$primary-soft: #F3EDEB;
+
+$accent: #8B8378;
+$accent-hover: #6F6A60;
+$accent-soft: #F0EFED;
+
+$warning: $accent; // Map warning to accent for consistency
+
+$light: #F7F6F4;
+$dark: #272225;
+
+$body-bg: #FFFFFF;
+$body-color: #272225;
+
+$border-color: #E2DED9;
+$text-muted: #5F585B;
+
+// Override Bootstrap Variables
+$border-width: 2px;
+$border-radius: 0; // Keep it square/minimal
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+
+// Spacing
+$spacer: 1rem;

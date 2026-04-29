@@ -13,3 +13,35 @@
 @import "components/marquee";
 @import "components/teacher-profile";
 @import "components/animations";
+
+
+// Then your custom styles
+
+// Border utilities
+.border-4 {
+  border-width: 4px !important;
+}
+
+// Marquee animation
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 30s linear infinite;
+  display: inline-block;
+}
+
+// Sticky positioning
+.sticky-top {
+  top: 1.5rem;
+}
+
+.form-item:focus-within .form-label {
+  color: $primary;
+}
