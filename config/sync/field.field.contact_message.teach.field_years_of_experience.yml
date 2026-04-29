@@ -1,0 +1,23 @@
+uuid: 691416da-f4f7-4d11-adf0-3760c6e665ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.storage.contact_message.field_years_of_experience
+id: contact_message.teach.field_years_of_experience
+field_name: field_years_of_experience
+entity_type: contact_message
+bundle: teach
+label: 'Years of Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

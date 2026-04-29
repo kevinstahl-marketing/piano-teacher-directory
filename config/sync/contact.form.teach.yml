@@ -1,0 +1,12 @@
+uuid: 86c94b88-537c-457d-81fe-0b50c72b0ce9
+langcode: en
+status: true
+dependencies: {  }
+id: teach
+label: teach
+recipients:
+  - admin@pianoteacherlink.com
+reply: ''
+weight: 0
+message: ''
+redirect: /contact

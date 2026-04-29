@@ -2,13 +2,13 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 059d1ea2-fa3d-4c4b-bfe3-2840148f3336
-name: 'Piano Teacher Directory'
-mail: admin@pianodirectory.local
+name: 'Piano Teacher Link'
+mail: admin@pianoteacherlink.com
 slogan: ''
 page:
-  403: ''
-  404: ''
-  front: /node/8
+  403: /node/19
+  404: /node/20
+  front: /node/11
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

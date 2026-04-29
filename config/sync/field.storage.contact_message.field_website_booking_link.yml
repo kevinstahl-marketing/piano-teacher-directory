@@ -1,0 +1,19 @@
+uuid: 3cb1d4a3-8892-4793-b08d-a1de5c2ddb58
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - link
+id: contact_message.field_website_booking_link
+field_name: field_website_booking_link
+entity_type: contact_message
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

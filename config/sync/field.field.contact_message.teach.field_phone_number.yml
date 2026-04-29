@@ -1,0 +1,21 @@
+uuid: 50d96f83-ac01-418c-af91-a91e4c76d61f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.storage.contact_message.field_phone_number
+  module:
+    - telephone
+id: contact_message.teach.field_phone_number
+field_name: field_phone_number
+entity_type: contact_message
+bundle: teach
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

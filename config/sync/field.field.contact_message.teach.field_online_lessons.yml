@@ -1,0 +1,21 @@
+uuid: 61555745-d39e-4e68-8979-e82310c2fabf
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.storage.contact_message.field_online_lessons
+  module:
+    - options
+id: contact_message.teach.field_online_lessons
+field_name: field_online_lessons
+entity_type: contact_message
+bundle: teach
+label: 'Online Lessons'
+description: 'Do you teach online lessons?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

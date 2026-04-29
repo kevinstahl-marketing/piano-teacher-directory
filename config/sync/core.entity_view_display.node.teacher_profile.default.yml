@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.teacher_profile.field_contact_email
     - field.field.node.teacher_profile.field_country
     - field.field.node.teacher_profile.field_extra_media
+    - field.field.node.teacher_profile.field_hourly_rate
     - field.field.node.teacher_profile.field_in_person_lessons
     - field.field.node.teacher_profile.field_instruments
     - field.field.node.teacher_profile.field_online_lessons
     - field.field.node.teacher_profile.field_profile_photo
     - field.field.node.teacher_profile.field_styles
+    - field.field.node.teacher_profile.field_teaching_approach
     - field.field.node.teacher_profile.field_telephone
     - field.field.node.teacher_profile.field_website_booking_link
     - field.field.node.teacher_profile.field_years_of_experience
@@ -28,38 +30,39 @@ bundle: teacher_profile
 mode: default
 content:
   field_bio:
-    type: text_default
-    label: above
-    settings: {  }
+    type: text_trimmed
+    label: visually_hidden
+    settings:
+      trim_length: 120
     third_party_settings: {  }
     weight: 102
     region: content
   field_city_region:
     type: string
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 104
     region: content
   field_contact_email:
-    type: basic_string
-    label: above
+    type: email_mailto
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     weight: 106
     region: content
   field_country:
     type: entity_reference_label
-    label: above
+    label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 113
     region: content
   field_extra_media:
     type: image
-    label: above
+    label: visually_hidden
     settings:
       image_link: ''
       image_style: ''
@@ -68,9 +71,17 @@ content:
     third_party_settings: {  }
     weight: 114
     region: content
+  field_hourly_rate:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 116
+    region: content
   field_in_person_lessons:
     type: boolean
-    label: above
+    label: visually_hidden
     settings:
       format: default
       format_custom_false: ''
@@ -80,15 +91,15 @@ content:
     region: content
   field_instruments:
     type: entity_reference_label
-    label: above
+    label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 109
     region: content
   field_online_lessons:
     type: boolean
-    label: above
+    label: visually_hidden
     settings:
       format: default
       format_custom_false: ''
@@ -98,7 +109,7 @@ content:
     region: content
   field_profile_photo:
     type: image
-    label: above
+    label: visually_hidden
     settings:
       image_link: ''
       image_style: ''
@@ -109,15 +120,22 @@ content:
     region: content
   field_styles:
     type: entity_reference_label
-    label: above
+    label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 110
     region: content
+  field_teaching_approach:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
   field_telephone:
     type: string
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -125,7 +143,7 @@ content:
     region: content
   field_website_booking_link:
     type: link
-    label: above
+    label: visually_hidden
     settings:
       trim_length: 80
       url_only: false
@@ -137,7 +155,7 @@ content:
     region: content
   field_years_of_experience:
     type: number_integer
-    label: above
+    label: visually_hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true

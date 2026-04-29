@@ -1,0 +1,20 @@
+uuid: 8284988e-787a-44ff-9d93-a2c2a1d0b90c
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_years_of_experience
+field_name: field_years_of_experience
+entity_type: contact_message
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

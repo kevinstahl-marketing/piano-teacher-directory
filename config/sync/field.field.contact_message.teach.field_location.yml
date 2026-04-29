@@ -1,0 +1,19 @@
+uuid: 9452b989-b639-48c0-af9f-dd430586d95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.storage.contact_message.field_location
+id: contact_message.teach.field_location
+field_name: field_location
+entity_type: contact_message
+bundle: teach
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

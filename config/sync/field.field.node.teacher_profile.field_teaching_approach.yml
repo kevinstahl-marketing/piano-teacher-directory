@@ -1,0 +1,24 @@
+uuid: 055090c9-7647-46cd-af8a-8232303375ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaching_approach
+    - filter.format.basic_html
+    - node.type.teacher_profile
+  module:
+    - text
+id: node.teacher_profile.field_teaching_approach
+field_name: field_teaching_approach
+entity_type: node
+bundle: teacher_profile
+label: 'Teaching Approach'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text

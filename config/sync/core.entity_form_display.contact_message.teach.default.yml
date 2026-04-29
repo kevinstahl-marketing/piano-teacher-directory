@@ -1,0 +1,111 @@
+uuid: 1d88a58d-6da3-4777-a504-08b632aff09b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.field.contact_message.teach.field_education_credentials
+    - field.field.contact_message.teach.field_hourly_rate
+    - field.field.contact_message.teach.field_instruments_taught
+    - field.field.contact_message.teach.field_location
+    - field.field.contact_message.teach.field_online_lessons
+    - field.field.contact_message.teach.field_phone_number
+    - field.field.contact_message.teach.field_website_booking_link
+    - field.field.contact_message.teach.field_years_of_experience
+  module:
+    - link
+    - telephone
+id: contact_message.teach.default
+targetEntityType: contact_message
+bundle: teach
+mode: default
+content:
+  field_education_credentials:
+    type: string_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_hourly_rate:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_instruments_taught:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_online_lessons:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_phone_number:
+    type: telephone_default
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_website_booking_link:
+    type: link_default
+    weight: 11
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_years_of_experience:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  mail:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 12
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  preview: true

@@ -1,0 +1,23 @@
+uuid: 8dd7ee18-039f-4220-86a6-0fd87982c9b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.storage.contact_message.field_website_booking_link
+  module:
+    - link
+id: contact_message.teach.field_website_booking_link
+field_name: field_website_booking_link
+entity_type: contact_message
+bundle: teach
+label: 'Website/Booking Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

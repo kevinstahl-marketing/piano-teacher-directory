@@ -1,0 +1,19 @@
+uuid: 2e4e1496-bbf2-4f90-b96c-5d91eeb84678
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.storage.contact_message.field_instruments_taught
+id: contact_message.teach.field_instruments_taught
+field_name: field_instruments_taught
+entity_type: contact_message
+bundle: teach
+label: 'Instruments Taught'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

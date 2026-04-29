@@ -1,0 +1,98 @@
+uuid: b566da9d-5323-4c64-917c-c3b16689eda8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.teach
+    - field.field.contact_message.teach.field_education_credentials
+    - field.field.contact_message.teach.field_hourly_rate
+    - field.field.contact_message.teach.field_instruments_taught
+    - field.field.contact_message.teach.field_location
+    - field.field.contact_message.teach.field_online_lessons
+    - field.field.contact_message.teach.field_phone_number
+    - field.field.contact_message.teach.field_website_booking_link
+    - field.field.contact_message.teach.field_years_of_experience
+  module:
+    - link
+    - options
+    - telephone
+id: contact_message.teach.default
+targetEntityType: contact_message
+bundle: teach
+mode: default
+content:
+  field_education_credentials:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_hourly_rate:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_instruments_taught:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_location:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_online_lessons:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_phone_number:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_website_booking_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_years_of_experience:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

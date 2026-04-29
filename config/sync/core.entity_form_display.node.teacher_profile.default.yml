@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.teacher_profile.field_contact_email
     - field.field.node.teacher_profile.field_country
     - field.field.node.teacher_profile.field_extra_media
+    - field.field.node.teacher_profile.field_hourly_rate
     - field.field.node.teacher_profile.field_in_person_lessons
     - field.field.node.teacher_profile.field_instruments
     - field.field.node.teacher_profile.field_online_lessons
     - field.field.node.teacher_profile.field_profile_photo
     - field.field.node.teacher_profile.field_styles
+    - field.field.node.teacher_profile.field_teaching_approach
     - field.field.node.teacher_profile.field_telephone
     - field.field.node.teacher_profile.field_website_booking_link
     - field.field.node.teacher_profile.field_years_of_experience
@@ -77,6 +79,14 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_hourly_rate:
+    type: string_textfield
+    weight: 136
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_in_person_lessons:
     type: boolean_checkbox
     weight: 128
@@ -116,6 +126,14 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_teaching_approach:
+    type: text_textfield
+    weight: 135
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
