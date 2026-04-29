@@ -36,10 +36,10 @@
                     {% if content.field_country %}
                         {{ content.field_country }}
                     {% endif %}
-                        {% if content.field_city_region %}
+                    {% if content.field_city_region %}
                         {{ content.field_city_region }}
                     {% endif %}
-                  
+
                 </p>
 
                 <div class="teacher-profile-page__tags">
@@ -132,6 +132,31 @@
 
         </div>
     </div>
+</section>
+
+<section class="py-5 bg-light border-top border-4 border-warning">
+  <div class="container" style="max-width: 1200px;">
+    <div class="bg-primary py-5 px-4 text-center border border-4 border-warning">
+
+      {% set teacher_name = node.label %}
+      {% set first_name = teacher_name|split(' ')[0] %}
+      {% set email = content.field_contact_email['#items'].value %}
+
+      <h2 class="text-white mb-4">Ready to Start Learning?</h2>
+
+      <p class="text-white mb-4 mx-auto" style="max-width: 48rem;">
+        Contact {{ first_name }} today to schedule your first lesson and begin your musical journey.
+      </p>
+
+      {% if email %}
+        <a href="mailto:{{ email }}?subject=Piano Lessons Inquiry - {{ teacher_name|url_encode }}"
+           class="btn btn-light btn-lg fw-bold border border-2">
+          SEND MESSAGE →
+        </a>
+      {% endif %}
+
+    </div>
+  </div>
 </section>
 
 </article>

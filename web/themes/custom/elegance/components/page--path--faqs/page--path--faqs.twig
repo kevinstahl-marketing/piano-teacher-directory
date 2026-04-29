@@ -1,0 +1,197 @@
+{#
+/**
+* @file
+* Template for page--path--faqs component.
+*/
+#}
+
+<!-- Page Header -->
+<section class="position-relative overflow-hidden bg-dark text-white py-5 border-bottom border-4 border-warning">
+  <!-- Background Image -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" 
+       style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'); background-size: cover; background-position: center;">
+  </div>
+  
+  <!-- Dark Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.75;"></div>
+  
+  <!-- Content -->
+  <div class="container position-relative py-5 text-center" style="max-width: 1200px;">
+    <h1 class="mb-4">Frequently Asked Questions</h1>
+    <p class="lead">
+      Find answers to common questions about our piano teacher directory
+    </p>
+  </div>
+</section>
+
+<!-- FAQs Content -->
+<section class="py-5 bg-light">
+  <div class="container" style="max-width: 900px;">
+    
+    <!-- For Students Section -->
+    <div class="mb-5">
+      <h2 class="mb-4 pb-3 border-bottom border-4 border-primary">For Students</h2>
+      
+      <div class="accordion" id="studentAccordion">
+        <!-- Question 1 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#student1">
+              How do I find a piano teacher?
+            </button>
+          </h3>
+          <div id="student1" class="accordion-collapse collapse show" data-bs-parent="#studentAccordion">
+            <div class="accordion-body text-muted">
+              Browse our directory page to view all available teachers. You can filter by location, teaching style, and instrument. Each teacher profile includes their experience, rates, and teaching philosophy to help you make the best choice.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#student2">
+              What are the typical lesson rates?
+            </button>
+          </h3>
+          <div id="student2" class="accordion-collapse collapse" data-bs-parent="#studentAccordion">
+            <div class="accordion-body text-muted">
+              Lesson rates vary by teacher and typically range from $50-$100 per hour depending on the teacher's experience, credentials, and location. Each teacher sets their own rates, which are displayed on their profile page.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#student3">
+              How do I contact a teacher?
+            </button>
+          </h3>
+          <div id="student3" class="accordion-collapse collapse" data-bs-parent="#studentAccordion">
+            <div class="accordion-body text-muted">
+              Click the "Contact Teacher" button on any teacher's profile page. This will open your email client with a pre-filled subject line. You can also find contact information directly on their profile.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#student4">
+              Are teachers verified?
+            </button>
+          </h3>
+          <div id="student4" class="accordion-collapse collapse" data-bs-parent="#studentAccordion">
+            <div class="accordion-body text-muted">
+              Yes, all teachers in our directory are vetted for their credentials, experience, and teaching ability before being listed. We verify their education background and professional experience.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="accordion-item border-2">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#student5">
+              Do I need my own piano to take lessons?
+            </button>
+          </h3>
+          <div id="student5" class="accordion-collapse collapse" data-bs-parent="#studentAccordion">
+            <div class="accordion-body text-muted">
+              This varies by teacher. Some teachers have pianos available at their studio, while others prefer students to practice on their own instrument. Check with individual teachers about their requirements and recommendations.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- For Teachers Section -->
+    <div class="mb-5">
+      <h2 class="mb-4 pb-3 border-bottom border-4 border-warning">For Teachers</h2>
+      
+      <div class="accordion" id="teacherAccordion">
+        <!-- Question 1 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#teacher1">
+              How do I join the directory?
+            </button>
+          </h3>
+          <div id="teacher1" class="accordion-collapse collapse show" data-bs-parent="#teacherAccordion">
+            <div class="accordion-body text-muted">
+              Visit our "Become a Teacher" page and fill out the application form. We'll review your credentials and experience, and get back to you within 3-5 business days.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#teacher2">
+              Is there a fee to be listed?
+            </button>
+          </h3>
+          <div id="teacher2" class="accordion-collapse collapse" data-bs-parent="#teacherAccordion">
+            <div class="accordion-body text-muted">
+              No, there are no listing fees or hidden costs. We believe in connecting teachers and students without financial barriers. Our directory is completely free for teachers to join.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#teacher3">
+              What are the requirements to join?
+            </button>
+          </h3>
+          <div id="teacher3" class="accordion-collapse collapse" data-bs-parent="#teacherAccordion">
+            <div class="accordion-body text-muted">
+              We require teachers to have verifiable teaching experience, relevant education or credentials, and a commitment to quality instruction. Details about specific requirements are provided in the application form.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="accordion-item border-2 mb-3">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#teacher4">
+              How do students contact me?
+            </button>
+          </h3>
+          <div id="teacher4" class="accordion-collapse collapse" data-bs-parent="#teacherAccordion">
+            <div class="accordion-body text-muted">
+              Students can contact you directly through the contact information provided in your profile. You have full control over how and when you respond to student inquiries.
+            </div>
+          </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="accordion-item border-2">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#teacher5">
+              Can I update my profile?
+            </button>
+          </h3>
+          <div id="teacher5" class="accordion-collapse collapse" data-bs-parent="#teacherAccordion">
+            <div class="accordion-body text-muted">
+              Yes, you can request profile updates at any time by contacting us. We'll work with you to ensure your information stays current and accurate.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Still Have Questions -->
+    <div class="mt-5 p-5 bg-white border border-2 text-center">
+      <h3 class="h4 mb-3">Still Have Questions?</h3>
+      <p class="text-muted mb-4">
+        Can't find the answer you're looking for? We're here to help.
+      </p>
+      <a href="/contact" class="btn btn-primary btn-lg fw-bold border-2">
+        Contact Us
+      </a>
+    </div>
+    
+  </div>
+</section>
