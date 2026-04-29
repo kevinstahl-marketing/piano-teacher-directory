@@ -1,0 +1,20 @@
+.js main section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.45s ease-out,
+    transform 0.45s ease-out;
+}
+
+.js main section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js main section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

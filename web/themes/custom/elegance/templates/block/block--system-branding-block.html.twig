@@ -21,17 +21,21 @@
 %}
   {% block block_content %}
     {%
-      include 'radix:navbar-brand' with {
+      include 'elegance:navbar-brand' with {
         text: site_name,
         site_slogan,
         image: site_logo,
-        width: '40px',
+        width: '38px',
         height: 'auto',
         path: path('<front>'),
         alt: elements.content.site_name['#markup'] ~ ' logo',
         navbar_brand_utility_classes: [
           'd-inline-flex',
           'align-items-center',
+          'gap-1',
+          'fw-bold',
+          'text-uppercase',
+          'text-decoration-none',
         ],
       }
     %}

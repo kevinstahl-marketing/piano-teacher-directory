@@ -12666,6 +12666,16 @@ textarea.form-control-lg {
   margin-bottom: 0;
 }
 
+.teacher-card {
+  transition: all 0.2s ease;
+}
+
+.teacher-card:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 .marquee {
   display: flex;
   width: -webkit-max-content;
@@ -12768,6 +12778,30 @@ textarea.form-control-lg {
   background-color: var(--bs-dark);
   border-color: var(--bs-dark);
   color: var(--bs-white);
+}
+
+.js main section {
+  opacity: 0;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  transition: opacity 0.45s ease-out, -webkit-transform 0.45s ease-out;
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out, -webkit-transform 0.45s ease-out;
+}
+
+.js main section.is-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js main section {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+    transition: none;
+  }
 }
 
 /*# sourceMappingURL=main.style.css.map*/

@@ -22,12 +22,13 @@
 {% set placement = placement ?? '' %}
 {% set navbar_expand = navbar_expand ?? 'lg' %}
 {% set navbar_theme = navbar_theme ?? null %}
+{% set navbar_container_type = 'fluid' %}
 
 {%
 set navbar_container_classes = [
 navbar_container_type is null ? 'container' : '',
 navbar_container_type ? 'container' ~ (navbar_container_type ? '-' ~ navbar_container_type : '') : '',
-]|merge(navbar_container_utility_classes ?: ['d-flex', 'align-items-center', 'justify-content-between', 'px-5'])
+]|merge(navbar_container_utility_classes ?: ['d-flex', 'align-items-center', ])
 %}
 
 {%
@@ -49,7 +50,6 @@ placement,
         {% block branding %}
             {{ branding }}
         {% endblock %}
-        <span class="fw-bold text-uppercase" style="letter-spacing: 0.05em;">Piano Teachers</span>
 
         {% block navbar_toggler %}
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@ placement,
             </button>
         {% endblock %}
 
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse justify-content-end">
             {% block left %}
                 {{ left }}
             {% endblock %}
