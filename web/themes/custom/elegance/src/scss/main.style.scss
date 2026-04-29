@@ -37,10 +37,6 @@
   display: inline-block;
 }
 
-// Sticky positioning
-.sticky-top {
-  top: 1.5rem;
-}
 
 .form-item:focus-within .form-label {
   color: $primary;

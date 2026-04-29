@@ -32,13 +32,13 @@
                 <h1 class="mb-4">{{ label }}</h1>
 
                 <p class="text-muted mb-4">
-
-                    {% if content.field_country %}
-                        {{ content.field_country }}
-                    {% endif %}
                     {% if content.field_city_region %}
                         {{ content.field_city_region }}
                     {% endif %}
+                    {% if content.field_country %}
+                        {{ content.field_country }}
+                    {% endif %}
+
 
                 </p>
 
