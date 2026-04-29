@@ -35,180 +35,42 @@
 
       <!-- 🔽 BUILD COMPONENT HERE 🔽 -->
 
-      <!-- Page Header -->
-      <section class="position-relative overflow-hidden bg-dark text-white py-5 border-bottom border-4 border-warning">
-        <!-- Background Image -->
-        <div class="position-absolute top-0 start-0 w-100 h-100"
-          style="background-image: url('https://images.unsplash.com/photo-1446922228752-9b9245ca8aa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920'); background-size: cover; background-position: center;">
-        </div>
+      <!-- 404 Not Found Page -->
+      <section class="py-5 bg-light min-vh-100 d-flex align-items-center">
+        <div class="container" style="max-width: 800px;">
+          <div class="text-center">
+            <!-- 404 Number -->
+            <div class="display-1 fw-bold text-primary mb-4" style="font-size: 8rem; line-height: 1;">
+              404
+            </div>
 
-        <!-- Dark Overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.8;"></div>
+            <!-- Heading -->
+            <h1 class="mb-4">Page Not Found</h1>
 
-        <!-- Content -->
-        <div class="container position-relative py-5" style="max-width: 1200px;">
-          <div class="text-center mb-5">
-            <h1 class="mb-4">Find a Piano Teacher</h1>
-            <p class="lead mb-5">
-              Browse our directory of experienced piano instructors
+            <!-- Message -->
+            <p class="lead text-muted mb-5">
+              Sorry, we couldn't find the page you're looking for. It may have been moved or doesn't exist.
             </p>
 
-            <!-- Stats -->
-            <div class="d-flex flex-wrap justify-content-center gap-4 gap-md-5">
-              <div class="text-center border-start border-4 border-white ps-3">
-                <div class="display-5 fw-bold mb-1">25+</div>
-                <div class="small text-uppercase">Teachers</div>
-              </div>
-              <div class="text-center border-start border-4 border-white ps-3">
-                <div class="display-5 fw-bold mb-1">15+</div>
-                <div class="small text-uppercase">Styles</div>
-              </div>
-              <div class="text-center border-start border-4 border-white ps-3">
-                <div class="display-5 fw-bold mb-1">50+</div>
-                <div class="small text-uppercase">Cities</div>
-              </div>
+            <!-- Action Buttons -->
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="/" class="btn btn-primary btn-lg fw-bold border-2">
+                Go to Homepage
+              </a>
+              <a href="/directory" class="btn btn-outline-primary btn-lg fw-bold border-2">
+                Browse Teachers
+              </a>
+            </div>
+
+            <!-- Decorative Border -->
+            <div class="mt-5 pt-5 border-top border-4 border-warning">
+              <p class="text-muted small mb-0">
+                Need help? <a href="/contact" class="text-primary text-decoration-none fw-bold">Contact us</a>
+              </p>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- Search and Filters -->
-      <section class="py-4 bg-white border-bottom border-4 border-primary">
-        <div class="container" style="max-width: 1200px;">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <input type="text" class="form-control form-control-lg border-2" id="searchQuery"
-                placeholder="Search by name or location..." onkeyup="filterTeachers()">
-            </div>
-
-            <div class="col-md-4">
-              <select class="form-select form-select-lg border-2 fw-bold" id="instrumentFilter"
-                onchange="filterTeachers()">
-                <option value="all">All Instruments</option>
-                <option value="piano">Piano</option>
-                <option value="keyboard">Keyboard</option>
-                <option value="organ">Organ</option>
-              </select>
-            </div>
-
-            <div class="col-md-4">
-              <select class="form-select form-select-lg border-2 fw-bold" id="styleFilter" onchange="filterTeachers()">
-                <option value="all">All Styles</option>
-                <option value="classical">Classical</option>
-                <option value="jazz">Jazz</option>
-                <option value="pop">Pop</option>
-                <option value="contemporary">Contemporary</option>
-                <option value="blues">Blues</option>
-                <option value="gospel">Gospel</option>
-                <option value="improvisation">Improvisation</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Teachers Grid -->
-      <section class="py-5 bg-light">
-        <div class="container" style="max-width: 1200px;">
-
-          <!-- Results Count -->
-          <div class="mb-4">
-            <p class="fw-bold text-muted mb-0" id="resultsCount">25 TEACHERS FOUND</p>
-          </div>
-
-          <!-- Teachers Grid -->
-          <div class="row g-4" id="teachersGrid">
-            <!-- Teacher Card 1 -->
-            <div class="col-md-6 col-lg-4 teacher-card" data-name="sarah chen" data-location="san francisco"
-              data-instruments="piano" data-styles="classical jazz theory">
-              <div class="card border-2 h-100 shadow-sm">
-                <div class="position-relative overflow-hidden border-bottom border-2" style="height: 300px;">
-                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
-                    class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover;" alt="Sarah Chen">
-                </div>
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 mb-2">Sarah Chen</h3>
-                  <p class="text-muted small mb-3">San Francisco, CA</p>
-
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="badge bg-light text-primary border border-primary">Classical</span>
-                    <span class="badge bg-light text-primary border border-primary">Jazz</span>
-                    <span class="badge bg-light text-primary border border-primary">Theory</span>
-                  </div>
-
-                  <p class="text-muted small mb-4 flex-grow-1">15+ years teaching experience with a focus on classical
-                    technique and music theory.</p>
-
-                  <a href="/teacher/1" class="btn btn-primary w-100 mt-auto">View Profile →</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Teacher Card 2 -->
-            <div class="col-md-6 col-lg-4 teacher-card" data-name="michael rodriguez" data-location="austin"
-              data-instruments="piano" data-styles="jazz blues improvisation">
-              <div class="card border-2 h-100 shadow-sm">
-                <div class="position-relative overflow-hidden border-bottom border-2" style="height: 300px;">
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
-                    class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover;"
-                    alt="Michael Rodriguez">
-                </div>
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 mb-2">Michael Rodriguez</h3>
-                  <p class="text-muted small mb-3">Austin, TX</p>
-
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="badge bg-light text-primary border border-primary">Jazz</span>
-                    <span class="badge bg-light text-primary border border-primary">Blues</span>
-                    <span class="badge bg-light text-primary border border-primary">Improvisation</span>
-                  </div>
-
-                  <p class="text-muted small mb-4 flex-grow-1">Professional jazz pianist specializing in improvisation
-                    and contemporary styles.</p>
-
-                  <a href="/teacher/2" class="btn btn-primary w-100 mt-auto">View Profile →</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Teacher Card 3 -->
-            <div class="col-md-6 col-lg-4 teacher-card" data-name="emily watson" data-location="portland"
-              data-instruments="piano" data-styles="pop contemporary beginners">
-              <div class="card border-2 h-100 shadow-sm">
-                <div class="position-relative overflow-hidden border-bottom border-2" style="height: 300px;">
-                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
-                    class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover;" alt="Emily Watson">
-                </div>
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 mb-2">Emily Watson</h3>
-                  <p class="text-muted small mb-3">Portland, OR</p>
-
-                  <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="badge bg-light text-primary border border-primary">Beginners</span>
-                    <span class="badge bg-light text-primary border border-primary">Pop</span>
-                    <span class="badge bg-light text-primary border border-primary">Kids</span>
-                  </div>
-
-                  <p class="text-muted small mb-4 flex-grow-1">Patient and encouraging teacher with expertise in
-                    teaching children and beginners.</p>
-
-                  <a href="/teacher/3" class="btn btn-primary w-100 mt-auto">View Profile →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- No Results Message (hidden by default) -->
-          <div class="text-center py-5 d-none" id="noResults">
-            <p class="text-muted mb-4">No teachers found matching your criteria.</p>
-            <button class="btn btn-primary btn-lg fw-bold border-2" onclick="clearFilters()">
-              CLEAR FILTERS
-            </button>
-          </div>
-
-        </div>
-      </section>
-
 
       <!-- 🔼 END COMPONENT 🔼 -->
 
