@@ -1,49 +1,56 @@
 {#
 /**
- * @file
- * Theme override for a single teacher card.
- */
+* @file
+* Theme override for a single teacher card.
+*/
 #}
 
 <div class="card border-2 h-100 shadow-sm">
-  <div class="teacher-card__image border-bottom border-2">
-    {{ image }}
-  </div>
-
-  <div class="card-body d-flex flex-column">
-    <div class="teacher-title">
-      <h3 class="h5 mb-2">
-        {{ title }}
-      </h3>
+    <div class="teacher-card__image border-bottom border-2">
+        {{ image }}
     </div>
 
-    {% if country %}
-      <div class="teacher-card__location text-muted small mb-3">
-        {{ country }}
-      </div>
-    {% endif %}
+    <div class="card-body d-flex flex-column">
+        <div class="teacher-title">
+            <h3 class="h5 mb-2">
+                {{ title }}
+            </h3>
+        </div>
 
-    {% if styles %}
-      <div class="teacher-styles mb-3">
-        {{ styles }}
-      </div>
-    {% endif %}
+        {% if city_region or country %}
+            <div class="teacher-card__location text-muted small mb-3">
+                {% if city_region %}
+                    {{ city_region }} - 
+                    {% if country %}
+                    {% endif %}
+                {% endif %}
+                {% if country %}
+                    {{ country }}
+                {% endif %}
+            </div>
+        {% endif %}
 
-    {% if instruments %}
-      <div class="teacher-instruments small mb-4">
-        <span class="text-body-secondary fw-medium me-1">Instruments:</span>
-        {{ instruments }}
-      </div>
-    {% endif %}
+        {% if styles %}
+            <div class="teacher-styles mb-3">
+                {{ styles }}
+            </div>
+        {% endif %}
 
-    {% if bio %}
-      <div class="teacher-card__bio text-muted small mb-4 flex-grow-1">
-        {{ bio }}
-      </div>
-    {% endif %}
+        {% if instruments %}
+            <div class="teacher-instruments small mb-4">
+                <span class="text-body-secondary fw-medium me-1">Instruments:</span>
+                {{ instruments }}
+            </div>
+        {% endif %}
 
-    <div class="mt-auto">
-      <a href="{{ url }}" class="btn btn-primary w-100">View Profile →</a>
+        {% if bio %}
+            <div class="teacher-card__bio text-muted small mb-4 flex-grow-1">
+                {{ bio }}
+            </div>
+        {% endif %}
+
+        <div class="mt-auto">
+            <a href="{{ url }}" class="btn btn-primary w-100">View Profile →</a>
+        </div>
     </div>
-  </div>
 </div>

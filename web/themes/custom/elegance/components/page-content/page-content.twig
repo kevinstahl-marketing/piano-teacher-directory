@@ -36,7 +36,7 @@
 
 {% set content_container_class = '' %}
 {% if page_content_container_type is null %}
-  {% set content_container_class = 'container' %}
+  {% set content_container_class = '' %}
 {% elseif page_content_container_type is not empty %}
   {% set content_container_class = 'container-' ~ page_content_container_type %}
 {% endif %}
