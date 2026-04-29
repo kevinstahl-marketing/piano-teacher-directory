@@ -8,3 +8,4 @@
 
 
 backup-before-deploy.sql.gz
+*.sql.gz
