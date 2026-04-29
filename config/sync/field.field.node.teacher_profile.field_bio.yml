@@ -1,0 +1,24 @@
+uuid: c345f494-3003-4161-85a0-5440b38db7b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - filter.format.basic_html
+    - node.type.teacher_profile
+  module:
+    - text
+id: node.teacher_profile.field_bio
+field_name: field_bio
+entity_type: node
+bundle: teacher_profile
+label: Bio
+description: 'Include a short biography.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 3e5f97c9-4923-49db-84f9-077552b72b30
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-legal-links
+  module:
+    - system
+  theme:
+    - elegance
+id: elegance_footerlegallinks
+theme: elegance
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-legal-links'
+settings:
+  id: 'system_menu_block:footer-legal-links'
+  label: Legal
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

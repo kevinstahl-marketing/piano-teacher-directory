@@ -1,0 +1,25 @@
+uuid: 5ab9991c-ae4d-4e7f-b839-9e4f9cf3932a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-support-links
+  module:
+    - system
+  theme:
+    - elegance
+id: elegance_footersupportlinks
+theme: elegance
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-support-links'
+settings:
+  id: 'system_menu_block:footer-support-links'
+  label: Support
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

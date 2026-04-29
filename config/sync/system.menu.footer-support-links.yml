@@ -1,0 +1,8 @@
+uuid: 601939c2-817f-4528-a773-875c32b742e3
+langcode: en
+status: true
+dependencies: {  }
+id: footer-support-links
+label: 'Footer Support Links'
+description: 'Support Links for the Footer '
+locked: false

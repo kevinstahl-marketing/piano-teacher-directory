@@ -1,0 +1,19 @@
+uuid: 2cfb2a27-a881-4bc6-acb9-47fd9de2a932
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.teacher_profile
+id: node.teacher_profile.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: teacher_profile
+label: 'Contact Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,22 @@
+uuid: c8306389-51a6-43c8-ad4b-207a09f02c82
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - elegance
+_core:
+  default_config_hash: 2LvTtLThgb7FO3ULm0z3VkF_kQW8jT804Rv96WgF24E
+id: elegance_content
+theme: elegance
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

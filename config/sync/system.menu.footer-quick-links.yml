@@ -1,0 +1,8 @@
+uuid: 838e455b-7a89-4774-b854-e2d57e363628
+langcode: en
+status: true
+dependencies: {  }
+id: footer-quick-links
+label: 'Footer Quick Links'
+description: 'Quick Links'
+locked: false

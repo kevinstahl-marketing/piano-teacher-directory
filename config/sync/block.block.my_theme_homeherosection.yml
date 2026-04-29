@@ -1,0 +1,28 @@
+uuid: 6a23b6c4-7e6a-4f3d-9d68-280d47fb28a7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_section:c65bf67f-436c-4b99-8be0-fddb372e385d'
+  module:
+    - block_content
+    - system
+  theme:
+    - my_theme
+id: my_theme_homeherosection
+theme: my_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c65bf67f-436c-4b99-8be0-fddb372e385d'
+settings:
+  id: 'block_content:c65bf67f-436c-4b99-8be0-fddb372e385d'
+  label: 'Home Hero Section'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

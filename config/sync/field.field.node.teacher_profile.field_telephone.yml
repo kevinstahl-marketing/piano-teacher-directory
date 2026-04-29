@@ -1,0 +1,21 @@
+uuid: 1d3ac9e7-d3ca-4062-90c4-32bc043dceb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telephone
+    - node.type.teacher_profile
+  module:
+    - telephone
+id: node.teacher_profile.field_telephone
+field_name: field_telephone
+entity_type: node
+bundle: teacher_profile
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

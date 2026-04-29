@@ -1,0 +1,14 @@
+uuid: 15b1f479-d1ec-4698-ba48-0908e0d09271
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.teacher_profile
+  module:
+    - node
+id: teacher
+label: Teacher
+weight: 4
+is_admin: false
+permissions:
+  - 'edit own teacher_profile content'

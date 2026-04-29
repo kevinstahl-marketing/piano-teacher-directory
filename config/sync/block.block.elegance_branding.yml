@@ -1,0 +1,25 @@
+uuid: 9f84e415-2339-4e94-b791-ab4bdc0db3e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - elegance
+_core:
+  default_config_hash: ARqJ7fVe_SQDIiVV5Hjk9k3ATm5y144t6Hm65fDOtic
+id: elegance_branding
+theme: elegance
+region: navbar_branding
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 94dd15df-ad47-452e-a90b-966db1655f97
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - elegance
+id: elegance_mainnavigation
+theme: elegance
+region: navbar_right
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

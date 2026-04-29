@@ -1,0 +1,31 @@
+uuid: 1f5567d6-c44a-4213-a3d8-ed0f2749a3a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_styles
+    - node.type.teacher_profile
+    - taxonomy.vocabulary.styles
+    - taxonomy.vocabulary.tags
+id: node.teacher_profile.field_styles
+field_name: field_styles
+entity_type: node
+bundle: teacher_profile
+label: Styles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      styles: styles
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: styles
+field_type: entity_reference

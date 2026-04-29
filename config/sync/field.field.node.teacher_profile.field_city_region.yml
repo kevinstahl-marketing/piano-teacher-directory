@@ -1,0 +1,19 @@
+uuid: 391d6a4c-64da-4c55-8155-31af50fe23ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_city_region
+    - node.type.teacher_profile
+id: node.teacher_profile.field_city_region
+field_name: field_city_region
+entity_type: node
+bundle: teacher_profile
+label: City/Region
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

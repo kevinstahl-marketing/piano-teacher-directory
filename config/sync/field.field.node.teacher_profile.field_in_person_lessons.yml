@@ -1,0 +1,21 @@
+uuid: d5e5c490-689c-4c1c-9a07-7137e68eb459
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_person_lessons
+    - node.type.teacher_profile
+id: node.teacher_profile.field_in_person_lessons
+field_name: field_in_person_lessons
+entity_type: node
+bundle: teacher_profile
+label: 'In-Person Lessons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

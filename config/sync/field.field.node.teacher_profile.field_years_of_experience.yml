@@ -1,0 +1,23 @@
+uuid: 0032fc73-61a4-4100-953a-2f1e99fb7e7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_years_of_experience
+    - node.type.teacher_profile
+id: node.teacher_profile.field_years_of_experience
+field_name: field_years_of_experience
+entity_type: node
+bundle: teacher_profile
+label: 'Years of Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

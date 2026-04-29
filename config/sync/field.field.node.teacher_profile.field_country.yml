@@ -1,0 +1,31 @@
+uuid: 4263a912-e283-48ae-aebc-4379154c46d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.teacher_profile
+    - taxonomy.vocabulary.country
+    - taxonomy.vocabulary.tags
+id: node.teacher_profile.field_country
+field_name: field_country
+entity_type: node
+bundle: teacher_profile
+label: Country
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country: country
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: country
+field_type: entity_reference

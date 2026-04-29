@@ -1,0 +1,25 @@
+uuid: 01600f95-3691-4f45-be55-151f77b987f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-quick-links
+  module:
+    - system
+  theme:
+    - elegance
+id: elegance_footerquicklinks
+theme: elegance
+region: footer
+weight: -1
+provider: null
+plugin: 'system_menu_block:footer-quick-links'
+settings:
+  id: 'system_menu_block:footer-quick-links'
+  label: 'Quick Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

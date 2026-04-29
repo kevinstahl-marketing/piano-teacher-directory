@@ -1,0 +1,31 @@
+uuid: 6b5e1f23-ba02-4e61-a3ac-b1985552847a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instruments
+    - node.type.teacher_profile
+    - taxonomy.vocabulary.instruments
+    - taxonomy.vocabulary.tags
+id: node.teacher_profile.field_instruments
+field_name: field_instruments
+entity_type: node
+bundle: teacher_profile
+label: Instruments
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      instruments: instruments
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: instruments
+field_type: entity_reference

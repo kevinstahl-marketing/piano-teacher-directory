@@ -1,0 +1,123 @@
+uuid: 18efbca2-7e29-44cf-8bd9-819f59ba284d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_section
+    - field.field.block_content.hero_section.field_background_image
+    - field.field.block_content.hero_section.field_button_label
+    - field.field.block_content.hero_section.field_button_link
+    - field.field.block_content.hero_section.field_subtitle
+    - field.field.block_content.hero_section.field_title
+  module:
+    - image
+    - layout_builder
+    - link
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          0d9f4583-3296-4e1f-b90b-4b91029bc77c:
+            uuid: 0d9f4583-3296-4e1f-b90b-4b91029bc77c
+            region: content
+            configuration:
+              id: 'field_block:block_content:hero_section:field_background_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          2b3b788d-87f7-414b-9ccb-896fde9fdff5:
+            uuid: 2b3b788d-87f7-414b-9ccb-896fde9fdff5
+            region: content
+            configuration:
+              id: 'field_block:block_content:hero_section:field_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          62d16f90-2a20-4253-a75d-56790436ee46:
+            uuid: 62d16f90-2a20-4253-a75d-56790436ee46
+            region: content
+            configuration:
+              id: 'field_block:block_content:hero_section:field_subtitle'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          8ede68e8-af5f-42cf-9b04-f67c0bac0518:
+            uuid: 8ede68e8-af5f-42cf-9b04-f67c0bac0518
+            region: content
+            configuration:
+              id: 'field_block:block_content:hero_section:field_button_label'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          708634e6-c1b0-462c-9772-64d06e163f91:
+            uuid: 708634e6-c1b0-462c-9772-64d06e163f91
+            region: content
+            configuration:
+              id: 'field_block:block_content:hero_section:field_button_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: visually_hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.hero_section.default
+targetEntityType: block_content
+bundle: hero_section
+mode: default
+content: {  }
+hidden:
+  field_background_image: true
+  field_title: true
+  field_subtitle: true
+  field_button_label: true
+  field_button_link: true

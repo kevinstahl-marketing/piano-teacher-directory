@@ -1,0 +1,19 @@
+uuid: b322bf09-159d-4ad9-a6f9-8bcdc0488da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.core_page
+  module:
+    - user
+id: node.core_page.default
+targetEntityType: node
+bundle: core_page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

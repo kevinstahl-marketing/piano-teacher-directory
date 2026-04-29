@@ -1,0 +1,9 @@
+uuid: 0cac493d-9439-4dfe-8434-7074aca7ae0d
+langcode: en
+status: true
+dependencies: {  }
+name: Styles
+vid: styles
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,19 @@
+uuid: 5ce0c2c5-412c-470d-8ee4-3e9a65a35286
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_section
+    - field.storage.block_content.field_button_label
+id: block_content.hero_section.field_button_label
+field_name: field_button_label
+entity_type: block_content
+bundle: hero_section
+label: 'Button Label'
+description: 'Write a label for a CTA (call to action)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
