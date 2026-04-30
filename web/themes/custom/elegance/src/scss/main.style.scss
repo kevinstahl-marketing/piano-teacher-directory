@@ -13,7 +13,8 @@
 @import "components/marquee";
 @import "components/teacher-profile";
 @import "components/animations";
-
+@import "components/navbar";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap');
 
 // Then your custom styles
 
@@ -41,3 +42,4 @@
 .form-item:focus-within .form-label {
   color: $primary;
 }
+

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap);
 @charset "UTF-8";
 /**
  * Variables
@@ -12842,6 +12843,64 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+@media (max-width: 300px) {
+  .navbar-brand__text {
+    display: none !important;
+  }
+}
+.navbar {
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(92, 68, 62, 0.08);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.navbar-brand__logo img {
+  border-radius: 1rem;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.navbar-brand:hover .navbar-brand__logo img {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.navbar-brand__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+}
+
+.navbar-brand__text .fw-semibold {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(2rem, 2.8vw, 3rem);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.42);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.navbar-brand:hover .fw-semibold {
+  opacity: 0.85;
+  color: rgba(0, 0, 0, 0.58);
+}
+
 .border-4 {
   border-width: 4px !important;
 }
