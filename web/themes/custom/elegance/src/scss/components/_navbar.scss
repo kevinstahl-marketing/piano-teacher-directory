@@ -59,3 +59,11 @@
   opacity: 0.85;
   color: rgba(0, 0, 0, 0.58);
 }
+
+.site-navbar {
+  transition: transform 0.25s ease;
+}
+
+.site-navbar.is-hidden {
+  transform: translateY(-100%);
+}
